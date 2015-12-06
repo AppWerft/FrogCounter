@@ -1,0 +1,222 @@
+{
+	"rootid": "a",
+	"dichotomy": {
+		"a": {
+			"title": "Amphibien",
+			"glossar": "Ein wesentliches Merkmal …",
+			"alternatives": [
+				{
+					"property": "Schwanz vorhanden",
+					"images": ["http://cdn2.spiegel.de/images/image-283505-galleryV9-idhw-283505.jpg"],
+					"nextdecision": "m"
+				}, {
+					"property": "kein Schwanz, gedrungener Körperbau",
+					"nextdecision": "b"
+				}
+			]
+		},
+		"b": {
+			"title": "Frösche/Unken/Kröten",
+			"glossar": "",
+			"alternatives": [
+				{
+					"property": "Finger- und Zehenspitzen mit Haftscheiben",
+					"images": [],
+					"species": "page25"
+				}, {
+					"property": "ohne Haftscheiben",
+					"nextdecision": "c"
+				}
+			]
+		},
+		"c": {
+			"title": "Pupillenform",
+			"alternatives": [
+				{
+					"property": "Pupille waagerecht elliptisch oder rund",
+					"nextdecision": "d"
+				},{
+					"property": "Pupille senkrecht, schlitzförmig oder herzförmig",
+					"nextdecision": "g"
+				}
+			]
+		},
+		"d": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "Rücken warzig mit deutlichen sichtbaren länglichen Ohrdrüsen hinter den Augen",
+					"nextdecision": "e"
+				}, {
+					"property": "Rücken glatt ohne länglichen Ohrdrüsen hinter den Augen",
+					"nextdecision": "g"
+				}
+			]
+		},
+		"e": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"f": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"g": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"h": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"i": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"k": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"l": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"m": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"n": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"o": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"p": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"q": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		},
+		"r": {
+			"title": "",
+			"alternatives": [
+				{
+					"property": "",
+					"nextdecision": ""
+				}, {
+					"property": "",
+					"nextdecision": ""
+				}
+			]
+		}
+		
+	},
+	"species": {
+		"1": {
+			"common_name": "Graue Maus",
+			"latin_name": "Greyhound",
+			"wikiurl": "http://",
+			"images": ["http://", ""]
+		}
+	}
+}

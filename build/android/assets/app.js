@@ -1,0 +1,1 @@
+Titanium.UI.setBackgroundColor("#000");var $=require("ui/gallery.window")();$.addEventListener("android:back",function(i){i.cancelBubble=!0;var r=Ti.Android.createIntent({action:Ti.Android.ACTION_MAIN,flags:Ti.Android.FLAG_ACTIVITY_NEW_TASK});return r.addCategory(Ti.Android.CATEGORY_HOME),Ti.Android.currentActivity.startActivity(r),!1}),$.open();
