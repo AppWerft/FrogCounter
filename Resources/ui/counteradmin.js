@@ -1,6 +1,7 @@
 var Model = new (require('model/index'))();
 var Moment = require('vendor/moment');
 Moment.locale('de');
+var АктйонБар = require('com.alcoapps.actionbarextras');
 
 module.exports = function() {
 	function updateList() {
@@ -67,7 +68,8 @@ module.exports = function() {
 		emailDialog.open();
 	});
   	$.addEventListener('open',function(_event){
-  		
+  		АктйонБар.title='Froschzähler';
+  		АктйонБар.subtitle='Verwaltung der Zählgruppen';
   		$.add($.list);
   		_event.source.getActivity().actionBar.displayHomeAsUp=true;
      		var activity = _event.source.getActivity();

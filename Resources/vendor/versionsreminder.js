@@ -58,9 +58,10 @@ module.exports = function() {
 			case -1:
 				var dialog = Ti.UI.createAlertDialog({
 					cancel : 1,
-					buttonNames : ["To store", "Cancel"],
-					message : "There is a new version  in playstore.\n\nThis app on " + Ti.Platform.model + ' is in  ' + Ti.App.getVersion() + "\n\nIn store version  " + storeversion + " is waiting for you.\n\nDo you want update?",
-					title : "New version „" + Ti.App.getName() + "“"
+					buttonNames : ["Zum Playstore", "Abbruch"],
+					message : "Es gibt eine neue Version in Playstore.\n\nDiese App auf Deinem " + Ti.Platform.model 
+					+ ' ist in Version  ' + Ti.App.getVersion() + "\n\nIm Playstore  gibt es schon  " + storeversion + " und wartet auf Dich.\n\nWillst Du erneuern?",
+					title : "Neue Froschzählerversion"
 				});
 				dialog.show();
 				dialog.addEventListener("click", function(e) {

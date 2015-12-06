@@ -1,6 +1,8 @@
-
+var АктйонБар = require('com.alcoapps.actionbarextras');
 module.exports = function(_event) {
     var activity = _event.source.getActivity();
+    АктйонБар.setTitle('Froschzähler');
+		АктйонБар.setSubtitle('Zähler');
     activity.onCreateOptionsMenu = function(_menuevent) {
         _menuevent.menu.clear();
         _menuevent.menu.add({

@@ -1,30 +1,4 @@
-var frogs = [{
-	name : "Erdkröte",
-	images : ["Erdkroete/0.jpg", "Erdkroete/1.jpg", "Erdkroete/2.jpg", "Erdkroete/3.jpg", "Erdkroete/4.jpg"],
-	description : "ein Text ohne Sinn"
-}, {
-	name : "Grasfrosch",
-	description : "ein Text ohne Sinn",
-	images : ["Grasfrosch/1.jpg", "Grasfrosch/2.jpg", "Grasfrosch/3.jpg", "Grasfrosch/4.jpg"]
-}, {
-	name : "Teichmolch",
-	images : ["Teichmolch/1.jpg", "Teichmolch/2.jpg", "Teichmolch/3.jpg", "Teichmolch/4.jpg"]
-}, {
-	name : "Fadenmolch",
-	images : ["Fadenmolch/0.jpg", "Fadenmolch/1.jpg", "Fadenmolch/2.jpg", "Fadenmolch/4.jpg"]
-}, {
-	name : "Bergmolch",
-	images : ["Bergmolch/1.jpg", "Bergmolch/2.jpg", "Bergmolch/4.jpg", "Bergmolch/5.jpg"]
-}, {
-	name : "Grünfrosch",
-	images : ["Gruenfrosch/1.jpg", "Gruenfrosch/2.jpg", "Gruenfrosch/3.jpg"]
-}, {
-	name : "Moorfrosch",
-	images : ["Moorfrosch/1.jpg", "Moorfrosch/2.jpg", "Moorfrosch/3.jpg"]
-}, {
-	name : "Springfrosch",
-	images : ["Springfrosch/1.jpg", "Springfrosch/2.jpg", "Springfrosch/3.jpg"]
-}];
+var frogs = require('model/frogs');
 
 var Model = new (require('model/index'))();
 var flippableView = require('de.manumaticx.androidflip');
@@ -62,11 +36,24 @@ module.exports = function() {
 			},
 			text : frog.name
 		});
+		view.latinname = Ti.UI.createLabel({
+			top : 50,
+			left : 10,
+			color : '#6f7',
+			opacity : 0.7,
+			font : {
+				fontWeight : 'bold',
+				fontSize : 20,
+				fontStyle: 'cursive'
+			},
+			text : frog.latin || ''
+		});
 		view.add(view.animalname);
+		view.add(view.latinname);
 		view.counter = Ti.UI.createLabel({
-			top : 0,
+			top : -10,
 			right : 10,
-			height : 100,
+			height : 120,
 			color : '#DF8F00',
 			opacity : 1,
 			font : {

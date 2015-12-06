@@ -4,7 +4,7 @@
     <url>http://nabu.de</url>
     <id>de.appwerft.frogcounter</id>
     <name>FrogCounter</name>
-    <version>1.0.2</version>
+    <version>1.0.5</version>
     <publisher>fuerst</publisher>
     <copyright>2015 by fuerst</copyright>
     <icon>appicon.png</icon>
@@ -39,12 +39,12 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-    	 <manifest android:versionCode="3" android:versionName="1.0.3"></manifest>	
+        <manifest android:versionCode="5" android:versionName="1.0.5"/>
     </android>
-    
     <modules>
         <module platform="android">de.manumaticx.androidflip</module>
         <module platform="android">com.alcoapps.actionbarextras</module>
+        <module platform="android">titutorial.audiorecorder</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
