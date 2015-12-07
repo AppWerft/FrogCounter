@@ -1,5 +1,5 @@
 var $ = require('ui/main.window')();
-require('model/frogsounds.adapter')();
+
 
 $.addEventListener("android:back", function(_e) {
 		_e.cancelBubble = true;

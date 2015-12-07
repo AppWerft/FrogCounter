@@ -4,7 +4,7 @@
     <url>http://nabu.de</url>
     <id>de.appwerft.frogcounter</id>
     <name>FrogCounter</name>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <publisher>fuerst</publisher>
     <copyright>2015 by fuerst</copyright>
     <icon>appicon.png</icon>
@@ -39,7 +39,7 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="6" android:versionName="1.0.6"/>
+        <manifest android:versionCode="7" android:versionName="1.0.7"/>
     </android>
     <modules>
         <module platform="android">de.manumaticx.androidflip</module>

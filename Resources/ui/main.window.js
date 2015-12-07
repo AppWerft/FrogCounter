@@ -53,8 +53,8 @@ module.exports = function() {
 		view.add(view.animalname);
 		view.add(view.latinname);
 		view.counter = Ti.UI.createLabel({
-			top : -10,
-			right : 10,
+			top : -20,
+			right : 10,zIndex:999,
 			height : 120,
 			color : '#DF8F00',
 			opacity : 1,

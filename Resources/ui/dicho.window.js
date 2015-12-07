@@ -2,6 +2,7 @@ var Model = new (require('model/index'))();
 var Dicho = require('model/dichotomy.adapter');
 var АктйонБар = require('com.alcoapps.actionbarextras');
 
+
 module.exports = function(id) {
 	var $ = Ti.UI.createWindow({
 		fullScreen : true,
@@ -79,7 +80,12 @@ module.exports = function(id) {
      		var activity = _event.source.getActivity();
      		activity.actionBar.onHomeIconItemSelected = function() {
   				_event.source.close();
+  				
     	 };
+    	 
+    	  activity.onCreateOptionsMenu = function(_menuevent) {
+    	 
+    	  };
     }); 
 	return $;
 };
