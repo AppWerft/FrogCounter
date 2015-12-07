@@ -1,17 +1,17 @@
 module.exports = [{
 	name : "Erdkröte",
 	latin : "Bufo bufo",
-	images : ["Erdkroete/0.jpg", "Erdkroete/1.jpg","Erdkroete/2.jpg", "Erdkroete/3.jpg", "Erdkroete/4.jpg"],
+	images : ["Erdkroete/0.jpg", "Erdkroete/1.jpg","Erdkroete/2.jpg", "Erdkroete/3.jpg"],
 	description : "ein Text ohne Sinn"
 }, {
 	name : "Grasfrosch",
 	latin : "Rana temporaria",
 	description : "ein Text ohne Sinn",
-	images : ["Grasfrosch/1.jpg", "Grasfrosch/2.jpg", "Grasfrosch/3.jpg", "Grasfrosch/4.jpg"]
+	images : ["Grasfrosch/1.jpg", "Grasfrosch/2.jpg", "Grasfrosch/3.jpg"]
 }, {
 	name : "Teichmolch",
 	latin : "Lissotriton vulgaris",
-	images : ["Teichmolch/1.jpg", "Teichmolch/2.jpg", "Teichmolch/3.jpg", "Teichmolch/4.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TriturusVulgaris2-.jpg/800px-TriturusVulgaris2-.jpg"]
+	images : ["Teichmolch/1.jpg", "Teichmolch/2.jpg", "Teichmolch/3.jpg"]
 }, {
 	name : "Fadenmolch",
 	"latin" : "Lissotriton helveticus",

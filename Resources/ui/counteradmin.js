@@ -22,7 +22,7 @@ module.exports = function() {
 					fontWeight:'bold',
 					fontSize:20
 				},
-				top:10,
+				top:7,
 				left:10
 				
 			}));
@@ -31,7 +31,7 @@ module.exports = function() {
 				text: Moment(e.ctime).format('LLLL'),
 				height:Ti.UI.SIZE,
 				font : {fontSize:16},
-				top:40,
+				top:36,
 				left:10
 			}));
 			row.add(Ti.UI.createLabel({
@@ -39,8 +39,15 @@ module.exports = function() {
 				text: 'Individuen: ' + e.summary.total + ',  Arten: ' + e.summary.species ,
 				height:Ti.UI.SIZE,
 				font : {fontSize:16},
-				top:60,
+				top:55,bottom:5,
 				left:10
+			}));
+			row.add(Ti.UI.createImageView({
+				image: '/assets/share.png',
+				width:25,
+				height:25,
+				right:12
+				
 			}));
 			return row;
 		});

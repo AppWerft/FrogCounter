@@ -1,14 +1,5 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
+var $ = require('ui/main.window')();
 
-
-
-//
-// create base UI tab and root window
-//
-
-
-var $ = require('ui/gallery.window')();
 $.addEventListener("android:back", function(_e) {
 		_e.cancelBubble = true;
 		var intent = Ti.Android.createIntent({
