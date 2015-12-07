@@ -1,0 +1,1 @@
+var Papa=require("vendor/papaparse");module.exports=function(){var e=Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory,"model","frogsounds.csv").read().text,r=Papa.parse(e,{header:!1,delimiter:";",skipEmptyLines:!0,dynamicTyping:!0});console.log(r.data),console.log("Length="+r.data.length),console.log(r.data[0])};
