@@ -3,21 +3,23 @@ var species = {};
 data.forEach(function(line) {
 	if (!species[line[0]])
 		species[line[0]] = [];
-	species[line[0]].push({
-		local : line[2],
-		district : line[5],
-		lat : line[7],
-		lng : line[8],
-		date : line[9],
-		time : line[10],
-		decription : line[17],
-		sound_type : line[18],
-		author : line[22],
-		weather : line[23],
-		mp3 : 'http://www.tierstimmenarchiv.de/recordings/'+line[33]+'.mp3'
-	});
+	if (line[33])
+		species[line[0]].push({
+			locality : line[2],
+			district : line[5],
+			lat : line[7],
+			lng : line[8],
+			date : line[9],
+			time : line[10],
+			description : line[17],
+			sound_type : line[18],
+			background_species : line[19],
+			author : line[22],
+			weather : line[23],
+			duration : line[32],
+			mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + line[33] + '_short.mp3'
+		});
 });
-console.log(species);
 
 exports.getAllSpeciesNames = function() {
 	return Object.getOwnPropertyNames(species);
