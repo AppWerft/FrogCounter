@@ -3,14 +3,17 @@ var species = {};
 data.forEach(function(line) {
 	if (!species[line[0]])
 		species[line[0]] = [];
-	if (line[33])
+	if (line[33] && line[17])
 		species[line[0]].push({
 			locality : line[2],
-			district : line[5],
+			administrative_area : line[3],
+			country : line[4],
+			state : line[5],
+			scenic_area : line[6],
 			lat : line[7],
 			lng : line[8],
-			date : line[9],
-			time : line[10],
+			cdate : line[10] || 'keine Angabe',
+			ctime : line[11] || '',
 			description : line[17],
 			sound_type : line[18],
 			background_species : line[19],

@@ -2,33 +2,38 @@ exports.frogsounds = {
 	properties : {
 		height : Ti.UI.SIZE,
 		itemId : '',
+		left:20,
 		layout : 'vertical'
 	},
 	childTemplates : [{
 		type : 'Ti.UI.Label',
-		bindId : 'start',
+		bindId : 'ctime',
+		left : 0,
 		properties : {
 			left : 5,
 			touchEnabled : false,
 			top : 5,
 			color : '#777',
 			font : {
-				fontSize : 22,
-				fontFamily : 'Aller'
+				fontSize : 16,
+				
 			},
 		}
 	}, {
-		type : 'Ti.UI.View',
+		type : 'Ti.UI.Label',
+		bindId : 'author',
+		left : 0,
 		properties : {
-			width : Ti.UI.FILL,
-			layout : 'vertical',
-			left : 10,
-			bottom : 10,
-			top : 0,
-			height : Ti.UI.SIZE,
-			right : 25
-		},
-		childTemplates : [{
+			left : 5,
+			touchEnabled : false,
+			top : 5,
+			color : '#777',
+			font : {
+				fontSize : 16,
+				
+			},
+		}
+	},{
 			type : 'Ti.UI.Label',
 			bindId : 'description',
 			properties : {
@@ -37,10 +42,9 @@ exports.frogsounds = {
 					fontSize : 16,
 				},
 				color : '#eee',
-				left : 10,
-				right : 15,
+				left : 0,
+				right : 15,bottom:10,
 				width : Ti.UI.FILL,
 			}
 		}]
-	}]
 };
