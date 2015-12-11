@@ -5,14 +5,15 @@ module.exports = function(_event) {
 		АктйонБар.setSubtitle('Zähler');
     activity.onCreateOptionsMenu = function(_menuevent) {
         _menuevent.menu.clear();
-        /*_menuevent.menu.add({
-                    title : 'Sound-DB',
+       
+       _menuevent.menu.add({
+                    title : 'Tierstimmenarchiv',
                     itemId : 2,
                     icon:Ti.App.Android.R.drawable.ic_action_frog,
                  showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
         }).addEventListener("click", function(){
-        	require('ui/sound.window')().open();
-        });*/
+        	require('ui/frogsounds.window')().open();
+        });
         _menuevent.menu.add({
                     title : 'Bestimmung',
                     itemId : 2,

@@ -1,34 +1,33 @@
-var stop = '/assets/ic_action_stop.png';
-var start = '/assets/ic_action_start.png';
-
+var AF = require('vendor/awesomeicons');
 
 module.exports = function() {
-	var audioPlayer;
+
 	var $ = Ti.UI.createView({
-		width : "260dp",
-		height : "100dp",
-		backgroundColor:'#80c0'
+		height : 100,
+		top : -100,
+		backgroundColor : '#a090'
 	});
 	$.timer = Ti.UI.createLabel({
-		top : "10dp",
-		right : 0,
+		top : 10,
+		right : 20,
 		width : Ti.UI.SIZE
 	});
 	$.playStopBtn = Ti.UI.createButton({
 		textAlign : Ti.UI.TEXT_ALIGNMENT_LEFT,
 		backgroundColor : "transparent",
 		font : {
-			fontSize : "24dp",
+			fontSize : 30,
 			fontFamily : "FontAwesome"
 		},
-		color : "#000",
+		color : "#906f",
 		top : 0,
+		title : AF.getIcon('play'),
 		width : Ti.UI.SIZE,
 		height : Ti.UI.SIZE
 	});
 	$.scrubBar = Ti.UI.createSlider({
-		top : "40dp",
-		width : "260dp",
+		top : "60dp",
+		width : "80%",
 		height : "30dp",
 		min : 0,
 		max : 100,
@@ -39,7 +38,6 @@ module.exports = function() {
 	$.add($.playStopBtn);
 	$.add($.scrubBar);
 
-	
 	var args = arguments[0] || {};
 
 	// save off current idle timer state
@@ -89,19 +87,19 @@ module.exports = function() {
 		if (audioPlayer.playing) {
 			audioPlayer.pause();
 			stopTimer();
-			$.playStopBtn.title = '';
+			$.playStopBtn.title = AF.getIcon('play');
 		} else {
 			audioPlayer.play();
 			$.scrubBar.max = getDuration();
 			// start the timer
 			startTimer();
 			// update the icon
-			$.playStopBtn.title ='II';
+			$.playStopBtn.title = AF.getIcon('stop');
 		}
 	}
 
 	function getDuration() {
-		return Ti.Android ? Math.ceil(audioPlayer.duration*1000): Math.ceil(audioPlayer.duration);
+		return Ti.Android ? Math.ceil(audioPlayer.duration * 1000) : Math.ceil(audioPlayer.duration);
 	}
 
 	/**
@@ -130,16 +128,22 @@ module.exports = function() {
 		if (!time) {
 			time = audioPlayer.time;
 		}
-		$.timer.text = prettifyTime(Math.round(time) / 1000) + " / " + totalDisplayDuration;
+		$.timer.text = prettifyTime(Math.round(time) / 1000) + " / " + (totalDisplayDuration || '0');
 	}
+
 	function startTimer() {
-		// twice pr second
+		// twice per second
 		if (!timerIsActive) {
 			timer = setInterval(function() {
-				var currentTime = Math.round(audioPlayer.time);
-				$.scrubBar.value = currentTime;
-				$.timer.text = prettifyTime(currentTime / 1000) + " / " + totalDisplayDuration;
+				if (audioPlayer && audioPlayer.time) {
+					var currentTime = Math.round(audioPlayer.time);
+					$.scrubBar.value = currentTime;
+					$.timer.text = prettifyTime(currentTime / 1000) + " / " + totalDisplayDuration;
+				}
 			}, 500);
+			setTimeout(function() {
+				clearInterval(timer);
+			}, 30000);
 		}
 
 		timerIsActive = true;
@@ -162,7 +166,7 @@ module.exports = function() {
 			startTimer();
 		});
 
-	} else  {
+	} else {
 		// Android only events
 		audioPlayer.addEventListener('change', function(e) {
 			Ti.API.debug("[AudioPlayerWidget] State: " + e.description + ' (' + e.state + ')');
@@ -172,6 +176,9 @@ module.exports = function() {
 			} else if (e.state == Ti.Media.Sound.STATE_PAUSED) {
 				stopTimer();
 			} else if (e.state == Ti.Media.Sound.STATE_STOPPED) {
+				$.top.animate({
+					top : -100
+				});
 				stopTimer();
 			}
 		});
@@ -191,9 +198,14 @@ module.exports = function() {
 		updateTimeLabel();
 
 		// update the icon
-		$.playStopBtn.title = playIcon;
+		$.playStopBtn.title = AF.getIcon('pause');
+		audioPlayer.play();
+		startTimer();
+		return;
+		$.animate({
+			top : 0
+		});
 	};
-	// call dispose when done
 	$.dispose = function() {
 		audioPlayer.stop();
 		if (Ti.Android) {

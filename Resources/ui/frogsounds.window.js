@@ -7,12 +7,14 @@ module.exports = function(id) {
 		title : 'Froschstimmen'
 	});
 	$.audioPlayer = require('vendor/audioplayer.widget')();
-	$.audioPlayer.top = 0;
+	$.darker = Ti.UI.createView({backgroundColor:'#c000',zIndex:9998,visible:false});
 	$.audioPlayer.zIndex = 9999;
-	$.add($.audioPlayer);
+	$.add($.darker);
+	
+	
 	$.addEventListener('open', function(_event) {
 		АктйонБар.setTitle('Tierstimmenarchiv.de');
-		АктйонБар.setSubtitle('Frösche');
+		АктйонБар.setSubtitle('Frösche/Unken/Kröten');
 		_event.source.getActivity().actionBar.displayHomeAsUp = true;
 
 		$.flipViewContainer = require('de.manumaticx.androidflip').createFlipView({
@@ -27,13 +29,15 @@ module.exports = function(id) {
     	activity.onCreateOptionsMenu = function(_menuevent) {};
 		$.flipViewContainer.addEventListener('itemclick', function(_e) {
 			var sound = JSON.parse(_e.itemId);
+			$.audioPlayer.setUrl(sound.mp3);
 			Ti.UI.createNotification({
 				message : 'Originallaufzeit: ' + sound.duration
 			}).show();
-
-			$.audioPlayer.setUrl(sound.mp3);
+			//$.darker.show();
+			setTimeout(function(){$.audioPlayer.animate({top:-100});$.darker.hide();},20000);
 		});
 		$.add($.flipViewContainer);
+		$.flipViewContainer.peakNext(true);
 		$.add($.audioPlayer);
 	});
 	$.addEventListener('close', $.audioPlayer.dispose);
