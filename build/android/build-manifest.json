@@ -1,6 +1,6 @@
 {
-	"target": "dist-playstore",
-	"deployType": "production",
+	"target": "device",
+	"deployType": "test",
 	"classname": "Frogcounter",
 	"platformPath": "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android",
 	"modulesHash": "f883bae97aaa1a987a97903560108566",
@@ -8,7 +8,6 @@
 	"modulesNativeHash": "68805250a94c26f4104989d8d209c362",
 	"modulesBindingsHash": "dbd49cad0eda59fbb4733f473ed90d2e",
 	"gitHash": "e46100b",
-	"outputDir": "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter",
 	"name": "FrogCounter",
 	"id": "de.appwerft.frogcounter",
 	"analytics": false,
@@ -26,7 +25,7 @@
 	"encryptJS": true,
 	"minSDK": 14,
 	"targetSDK": 23,
-	"propertiesHash": "af576e5282e77e313b1bd065e2876ca2",
+	"propertiesHash": "a198fa91b0ed8be89160cc53bade07e4",
 	"activitiesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"servicesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"jarLibHash": "bce086cf3ed44fc87e5d606a988c8a2c"

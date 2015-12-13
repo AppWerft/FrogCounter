@@ -28,7 +28,7 @@ module.exports = function(id) {
 			color : '#6f7',
 			opacity : 0.7,
 			font : {
-				fontSize : 36,
+				fontSize : 36,fontFamily :'Helvetica-Bold',
 				fontWeight : 'bold'
 			}
 		}));
@@ -42,7 +42,7 @@ module.exports = function(id) {
 			left : 0,
 			textAlign : 'left',
 			text : q.questiontext,
-			font : {
+			font : {fontFamily :'Helvetica-Bold',
 				fontSize : 18
 			}
 		}));
@@ -60,7 +60,7 @@ module.exports = function(id) {
 				left : 0,
 				textAlign : 'left',
 				text : q.description,
-				font : {
+				font : {fontFamily :'Helvetica-Bold',
 					fontSize : 14
 				}
 			}));
@@ -75,6 +75,7 @@ module.exports = function(id) {
 	});
 	$.addEventListener('open',function(_event) {
 		АктйонБар.setTitle('Bestimmungsschlüssel');
+		АктйонБар.setFont('Helvetica-Bold');
 		АктйонБар.setSubtitle(decision.title);
 		_event.source.getActivity().actionBar.displayHomeAsUp=true;
      		var activity = _event.source.getActivity();
@@ -82,7 +83,6 @@ module.exports = function(id) {
   				_event.source.close();
   				
     	 };
-    	 
     	  activity.onCreateOptionsMenu = function(_menuevent) {
     	  	_menuevent.menu.add({
                     title : 'Sound-DB',
@@ -92,7 +92,6 @@ module.exports = function(id) {
         }).addEventListener("click", function(){
         	require('ui/frogsounds.window')().open();
         });
-    	 
     	  };
     }); 
 	return $;

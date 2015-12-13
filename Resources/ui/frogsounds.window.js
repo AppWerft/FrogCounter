@@ -6,12 +6,6 @@ module.exports = function(id) {
 		fullScreen : true,
 		title : 'Froschstimmen'
 	});
-	$.audioPlayer = require('vendor/audioplayer.widget')();
-	$.darker = Ti.UI.createView({backgroundColor:'#c000',zIndex:9998,visible:false});
-	$.audioPlayer.zIndex = 9999;
-	$.add($.darker);
-	
-	
 	$.addEventListener('open', function(_event) {
 		АктйонБар.setTitle('Tierstimmenarchiv.de');
 		АктйонБар.setSubtitle('Frösche/Unken/Kröten');
@@ -29,16 +23,14 @@ module.exports = function(id) {
     	activity.onCreateOptionsMenu = function(_menuevent) {};
 		$.flipViewContainer.addEventListener('itemclick', function(_e) {
 			var sound = JSON.parse(_e.itemId);
-			console.log(sound);
-			$.audioPlayer.setUrl(sound.mp3url);
 			Ti.UI.createNotification({
-				message : 'Audiowiedergabe gestartet.' 
+				message : Ti.Network.online ?'Audiowiedergabe gestartet.' : "Wiedergabe leider nicht möglich, da das " + Ti.Platform.model + ' keine Verbindung ins Neuland hat. '
 			}).show();
+			if (Ti.Network.online)
+				require('ui/player.window')(sound).open();
 		});
 		$.add($.flipViewContainer);
 		$.flipViewContainer.peakNext(true);
-		$.add($.audioPlayer);
 	});
-	$.addEventListener('close', $.audioPlayer.dispose);
 	return $;
 };

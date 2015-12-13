@@ -2,6 +2,8 @@ var АктйонБар = require('com.alcoapps.actionbarextras');
 module.exports = function(_event) {
     var activity = _event.source.getActivity();
     АктйонБар.setTitle('Amphibienzähler');
+    АктйонБар.setFont('Helvetica-Bold');
+    
 		АктйонБар.setSubtitle('Zähler');
     activity.onCreateOptionsMenu = function(_menuevent) {
         _menuevent.menu.clear();

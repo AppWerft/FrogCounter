@@ -10,7 +10,7 @@ exports.frogsounds = {
 			touchEnabled : false,
 			top : 0,
 			width : 100,
-			height : 70
+			height : 80
 		}
 	}, {
 		type : 'Ti.UI.View',
@@ -31,6 +31,7 @@ exports.frogsounds = {
 				color : '#777',
 				font : {
 					fontSize : 16,
+					fontFamily : 'Helvetica-Bold'
 
 				},
 			}
@@ -44,6 +45,7 @@ exports.frogsounds = {
 				color : '#777',
 				font : {
 					fontSize : 16,
+					fontFamily : 'Helvetica-Bold'
 
 				},
 			}
@@ -55,9 +57,25 @@ exports.frogsounds = {
 				left : 0,
 				touchEnabled : false,
 				top : 5,
+				color : '#888',
+				font : {
+					fontSize : 16,
+					fontFamily : 'Helvetica-Bold'
+
+				},
+			}
+		},{
+			type : 'Ti.UI.Label',
+			bindId : 'latlng',
+			left : 0,
+			properties : {
+				left : 0,
+				touchEnabled : false,
+				top : 5,
 				color : '#777',
 				font : {
 					fontSize : 16,
+					fontFamily : 'DroidSans'
 
 				},
 			}
@@ -68,6 +86,7 @@ exports.frogsounds = {
 				top : 5,
 				font : {
 					fontSize : 16,
+					fontFamily : 'Helvetica-Bold'
 				},
 				color : '#eee',
 				left : 0,

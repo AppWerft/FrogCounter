@@ -9,7 +9,8 @@ module.exports = function(species) {
 		image : '/assets/' + species.toLowerCase() + '.jpg'
 	}));
 	headerView.add(Ti.UI.createLabel({
-		text : species,right:10,
+		text : species,
+		right : 10,
 		color : '#6f7',
 		textAlign : 'right',
 		bottom : 2,
@@ -42,7 +43,12 @@ module.exports = function(species) {
 					locality : {
 						height : sound.locality || sound.administrative_area ? Ti.UI.SIZE : 0,
 						text : 'Ort: ' + sound.locality + ', ' + sound.administrative_area
-					},spectrogram : {
+					},
+					latlng : {
+						height : sound.lat &&  sound.lng ? Ti.UI.SIZE : 0,
+						text : 'GPS: ' + sound.lat + ',' + sound.lng
+					},
+					spectrogram : {
 						image : sound.spectrogram
 					}
 				};

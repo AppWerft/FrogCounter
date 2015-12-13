@@ -1,21 +1,15 @@
-Ti.App.Properties.removeProperty('SPECIES');
+Ti.App.Properties.removeProperty('AMPHSPECIES');
 
-if (Ti.App.Properties.hasProperty('SPECIES')) {
-	console.log('Info: species from locale storage');
-	var species = JSON.parse(Ti.App.Properties.getString('SPECIES'));
+if (Ti.App.Properties.hasProperty('AMPHSPECIES')) {
+	var species = JSON.parse(Ti.App.Properties.getString('AMPHSPECIES'));
 } else {
 	console.log('Info: species must build ============================');
-	/*var file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'frogsounds.csv');
-	var data = require('vendor/papaparse').parse(file.read().text, {
-		delimiter : ';'
-	}).data;*/
 	var lines = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'frogsounds.json').read().text);
 	var records = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'recordslist.text').read().text;
 	var species = {};
 	var primarykey = {};
 	var total = 0;
 	lines.forEach(function(line) {
-		console.log(line);
 		var latin = line[0];
 		var key = line[33];
 		if (primarykey[key] == true)
@@ -50,19 +44,32 @@ if (Ti.App.Properties.hasProperty('SPECIES')) {
 		if (!species[s].length)
 			delete species[s];
 	});
-	Ti.App.Properties.setString('SPECIES', JSON.stringify(species));
+
+	Ti.App.Properties.setString('AMPHSPECIES', JSON.stringify(species));
+
 	primarykey = null;
 	Ti.UI.createNotification({
 		message : 'Tierstimmenarchiv erfolgtreich importiert.\n' + total + ' Tonaufnahmen'
 	}).show();
 }
 exports.getAllSpeciesNames = function() {
-	return Ti.App.Properties.hasProperty('SPECIES') ? Object.getOwnPropertyNames(species) : [];
-
+	var names = species ? Object.getOwnPropertyNames(species) : [];
+	return names.sort(function(a, b) {
+		return species[a].length < species[b].length ? true : false;
+	});
 };
-exports.getRecordsBySpecies = function(s) {
-	if (Ti.App.Properties.hasProperty('SPECIES'))
-		return species[s];
+exports.getRecordsBySpecies = function(name) {
+	if (Ti.App.Properties.hasProperty('AMPHSPECIES'))
+		return species[name];
 	else
 		return {};
 };
+exports.getAllSoundURLs = function() {
+	var urls=[];
+	Object.getOwnPropertyNames(species).forEach(function(name) {
+		species[name].forEach(function(item){
+			urls.push(item.mp3url);
+		});
+	});
+	return urls;
+}; 
