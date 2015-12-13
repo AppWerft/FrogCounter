@@ -65,11 +65,11 @@ exports.getRecordsBySpecies = function(name) {
 		return {};
 };
 exports.getAllSoundURLs = function() {
-	var urls=[];
+	var urls = [];
 	Object.getOwnPropertyNames(species).forEach(function(name) {
-		species[name].forEach(function(item){
+		species[name].forEach(function(item) {
 			urls.push(item.mp3url);
 		});
 	});
 	return urls;
-}; 
+};

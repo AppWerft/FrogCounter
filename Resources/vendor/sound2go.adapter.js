@@ -1,4 +1,4 @@
-const FOLDER = '3DModelsCache';
+const FOLDER = 'MP3Cache';
 if (Ti.Filesystem.isExternalStoragePresent())
 	var DEPOT = Ti.Filesystem.externalStorageDirectory;
 else
@@ -10,23 +10,15 @@ if (!folder.exists()) {
 var Model = new (require('adapter/model'))();
 
 /* Adapter object */
-var Adapter = function() {
-	var mainmenu = Model.getMainmenu();
-	var modelurls = [];
-	mainmenu.forEach(function(menuitem) {
-		if (menuitem.app == 'ar') {
-			modelurls = menuitem.subcategories.map(function(s) {
-				return s.data.wt3;
-			});
-		}
-	});
+var Adapter = function(urls) {
+	var cachedurls = urls;
 	this.eventhandlers = {};
 	var _this = this;
-	_this.models = [];
-	if (modelurls && Array.isArray(modelurls)) {
-		modelurls.forEach(function(url) {
+	_this.mp3s = [];
+	if (cachedurls && Array.isArray(cachedurls)) {
+		cachedurls.forEach(function(url) {
 			var file = Ti.Filesystem.getFile(DEPOT, FOLDER, Ti.Utils.md5HexDigest(url) + '.wt3');
-			_this.models.push({
+			_this.mp3s.push({
 				url : url,
 				file : file,
 				cached : file.exists() ? true : false,
@@ -41,8 +33,8 @@ Adapter.prototype = {
 	},
 	getWT3 : function(modelurl) {
 		var _this = this;
-		var models = _this.models.filter(function(m, i) {
-			return _this.models[i].url == modelurl ? true : false;
+		var models = _this.mp3s.filter(function(m, i) {
+			return _this.mp3s[i].url == modelurl ? true : false;
 		});
 		if (!models)
 			return modelurl;
@@ -54,16 +46,15 @@ Adapter.prototype = {
 		});
 		return cachedmodels.length == this.models.length ? true : false;
 	},
-	toggleAllModelsCache : function() {
+	toggleAllURLs : function() {
 		if (this.areCached() == true) {
 			console.log('TRUE');
-			this.uncacheAllModels();
+			this.uncacheAllURLs();
 		} else {
-			console.log('FALSE');
-			this.cacheAllModels();
+			this.cacheAllURLs();
 		}
 	},
-	cacheAllModels : function() {
+	cacheAllURLs : function() {
 		var _this = this;
 		function loadIt(model, onloadFn) {
 			var $ = Ti.Network.createHTTPClient({
@@ -82,18 +73,18 @@ Adapter.prototype = {
 			progress : 0.1
 		});
 		var ndx = 0;
-		function cacheModel(ndx) {
-			loadIt(_this.models[ndx], function(modelblob) {
-				_this.models[ndx].file.write(modelblob);
-				_this.models[ndx].cached = true;
+		function cacheURL(ndx) {
+			loadIt(_this.mp3s[ndx], function(modelblob) {
+				_this.mp3s[ndx].file.write(modelblob);
+				_this.mp3s[ndx].cached = true;
 				ndx++;
-				if (ndx < _this.models.length) {
+				if (ndx < _this.mp3s.length) {
 					console.log('NEXT model');
-					var progress = ndx / _this.models.length;
+					var progress = ndx / _this.mp3s.length;
 					_this.fireEvent('onprogress', {
 						progress : progress
 					});
-					cacheModel(ndx);
+					cacheURL(ndx);
 				} else {
 					_this.fireEvent('oncompleted', {
 						cached : true
@@ -102,9 +93,9 @@ Adapter.prototype = {
 
 			});
 		}
-		cacheModel(ndx);
+		cacheURL(ndx);
 	},
-	uncacheAllModels : function() {
+	uncacheAllURLs : function() {
 		console.log('Info try to remove all caches');
 		this.models.forEach(function(model) {
 			if (model.file.exists()) {

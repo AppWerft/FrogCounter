@@ -1,5 +1,5 @@
 
-12/13/2015, 4:35:24 PM
+12/13/2015, 5:30:37 PM
 
 Operating System
   Name                        = Mac OS X
@@ -21,7 +21,7 @@ Titanium SDK
   Target Platform             = android
 
 Command
-  /usr/local/bin/node /Users/fuerst/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform android --log-level trace --sdk 5.1.1.GA --project-dir /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter --target device --android-sdk /Users/fuerst/Library/android-sdk-macosx --device-id 0621ed32229928e7 --alias googlekey --keystore /Users/fuerst/.android.keystore --store-password *MHpsNH --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 49359 --plugin-paths /Users/fuerst/.appcelerator/install/5.1.0/package/node_modules --config-file /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/build-1450020918104.json --no-banner
+  /usr/local/bin/node /Users/fuerst/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform android --log-level trace --sdk 5.1.1.GA --project-dir /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter --target device --android-sdk /Users/fuerst/Library/android-sdk-macosx --device-id 0621ed32229928e7 --alias googlekey --keystore /Users/fuerst/.android.keystore --store-password *MHpsNH --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 49359 --plugin-paths /Users/fuerst/.appcelerator/install/5.1.0/package/node_modules --config-file /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/build-1450024230680.json --no-banner
 
 [DEBUG]  Detecting modules in /Users/fuerst/Library/Application Support/Titanium/modules
 [DEBUG]  Detected android module: analytics.google 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/analytics.google/1.0
@@ -502,7 +502,7 @@ Command
 [INFO]   Forcing rebuild: JavaScript files need to be re-encrypted
 [TRACE]  offline build file /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/build-2aaa563423f42c0fe0dc7620cb330236b4c6f905.json
 [TRACE]  online 0
-[TRACE]  offline file {"key":"5vAsn0ja6MjaSF7jgnln0A==","pepper":"Ak3vIJNKIjEaRs+W3HWmeA==","hmacKey":"gwUWZNKFKJtVIZxib3tuCQ==","o":100001896,"u":"128f7fa0-a54c-43c4-ba7d-7681dceb4c15","p":"starter","i":"566d733c680cd3091f005ac9","success":true,"url":"https://security.appcelerator.com/app-verify","username":"titanium@webmasterei-hamburg.de","timestamp":1450013501170,"offline":true,"skipped":true}, age=7423707
+[TRACE]  offline file {"key":"5vAsn0ja6MjaSF7jgnln0A==","pepper":"Ak3vIJNKIjEaRs+W3HWmeA==","hmacKey":"gwUWZNKFKJtVIZxib3tuCQ==","o":100001896,"u":"128f7fa0-a54c-43c4-ba7d-7681dceb4c15","p":"starter","i":"566d733c680cd3091f005ac9","success":true,"url":"https://security.appcelerator.com/app-verify","username":"titanium@webmasterei-hamburg.de","timestamp":1450013501170,"offline":true,"skipped":true}, age=10736912
 [DEBUG]  Copying /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources
 [DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/.DS_Store
 [DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/android
@@ -690,13 +690,54 @@ Command
 [DEBUG]  Copying /Library/Application Support/Titanium/modules/commonjs/jp.coe.mod.csvparser/0.1.1/assets
 [DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/.DS_Store
 [DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/.DS_Store
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/.DS_Store
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_offline.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_offline.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_0.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_0.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_1.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_1.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_10.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_10.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_2.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_2.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_3.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_3.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_4.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_4.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_5.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_5.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_6.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_6.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_7.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_7.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_8.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_8.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-hdpi/ic_action_online_9.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-hdpi/ic_action_online_9.png
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/.DS_Store
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_add.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_add.png
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_counter.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_counter.png
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_frog.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_frog.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_offline.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_offline.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_0.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_0.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_1.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_1.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_10.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_10.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_2.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_2.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_3.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_3.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_4.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_4.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_5.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_5.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_6.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_6.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_7.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_7.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_8.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_8.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xhdpi/ic_action_online_9.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xhdpi/ic_action_online_9.png
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_add.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_add.png
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_counter.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_counter.png
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_dicho.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_dicho.png
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_frog.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_frog.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_offline.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_offline.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_0.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_0.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_1.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_1.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_10.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_10.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_2.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_2.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_3.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_3.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_4.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_4.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_5.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_5.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_6.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_6.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_7.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_7.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_8.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_8.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/drawable-xxhdpi/ic_action_online_9.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable-xxhdpi/ic_action_online_9.png
 [DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/values/.DS_Store
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/platform/android/res/values/customtheme.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/customtheme.xml
 [DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/assets/Resources/appicon.png => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/drawable/appicon.png
@@ -721,9 +762,10 @@ Command
 [DEBUG]  Copying and minifying /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/vendor/awesomeicons.js => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets/vendor/awesomeicons.js
 [DEBUG]  Copying and minifying /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/vendor/moment.js => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets/vendor/moment.js
 [DEBUG]  Copying and minifying /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/vendor/papaparse.js => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets/vendor/papaparse.js
+[DEBUG]  Copying and minifying /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/vendor/sound2go.adapter.js => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets/vendor/sound2go.adapter.js
 [DEBUG]  Copying and minifying /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/vendor/versionsreminder.js => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets/vendor/versionsreminder.js
 [DEBUG]  Copying and minifying /Library/Application Support/Titanium/modules/commonjs/jp.coe.mod.csvparser/0.1.1/jp.coe.mod.csvparser.js => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets/jp.coe.mod.csvparser.js
-[INFO]   Encrypting JavaScript files: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/titanium_prep.macos "de.appwerft.frogcounter" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets" "TEMPLATES.js" "app.js" "model/dichotomy.adapter.js" "model/frogs.js" "model/frogsounds.adapter.js" "model/index.js" "ui/actionbar.js" "ui/counteradmin.js" "ui/dicho.window.js" "ui/frogsounds.list.js" "ui/frogsounds.window.js" "ui/main.window.js" "ui/player.window.js" "ui/project.dialog.js" "ui/wiki.window.js" "vendor/audioplayer.widget.js" "vendor/awesomeicons.js" "vendor/moment.js" "vendor/papaparse.js" "vendor/versionsreminder.js" "jp.coe.mod.csvparser.js" "_app_props_.json"
+[INFO]   Encrypting JavaScript files: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/titanium_prep.macos "de.appwerft.frogcounter" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/assets" "TEMPLATES.js" "app.js" "model/dichotomy.adapter.js" "model/frogs.js" "model/frogsounds.adapter.js" "model/index.js" "ui/actionbar.js" "ui/counteradmin.js" "ui/dicho.window.js" "ui/frogsounds.list.js" "ui/frogsounds.window.js" "ui/main.window.js" "ui/player.window.js" "ui/project.dialog.js" "ui/wiki.window.js" "vendor/audioplayer.widget.js" "vendor/awesomeicons.js" "vendor/moment.js" "vendor/papaparse.js" "vendor/sound2go.adapter.js" "vendor/versionsreminder.js" "jp.coe.mod.csvparser.js" "_app_props_.json"
 [DEBUG]  Adding library /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-v8.jar
 [DEBUG]  Adding library /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-analytics.jar
 [DEBUG]  Adding dependency library /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/aps-analytics.jar
@@ -754,25 +796,28 @@ Command
 [DEBUG]  Unknown namespace ui.iphone.progressbarstyle, skipping
 [DEBUG]  Unknown namespace api, skipping
 [DEBUG]  Unknown namespace media.sound, skipping
+[DEBUG]  Adding library /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-utils.jar
 [INFO]   Writing /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/assets/app.json
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-analytics.res.zip
-[DEBUG]  Copying /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1i6v9s5/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Copying /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-1m467iu/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-android.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1fg3vuv/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-1dc2q69/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-app.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-a9jwq7/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-1g0fhhq/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-filesystem.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1uyhtnb/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-rw5bb6/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-media.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-fn7pim/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-1ga2d95/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-locale.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1l9vf3f/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-cn7xmf/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-network.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1vhvh4b/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-1whsl0q/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-xml.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1xmjtoc/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-mxxpkg/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-platform.res.zip
-[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1skzz0i/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-9h09uq/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-utils.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-1fz2j5x/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/.classpath
 [DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/.gitignore
 [DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/.project
@@ -796,477 +841,6 @@ Command
 [DEBUG]  Merging en strings => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/strings.xml
 [DEBUG]  Writing ru strings => /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values-ru/strings.xml
 [INFO]   Generating /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res/values/theme.xml
-[INFO]   Packaging application: /Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/aapt "package" "-f" "-m" "-J" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/gen" "-M" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/AndroidManifest.xml" "-A" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/assets" "-S" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res" "-I" "/Users/fuerst/Library/android-sdk-macosx/platforms/android-23/android.jar" "-F" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/app.ap_" "--auto-add-overlay" "--extra-packages" "ti.modules.titanium.ui:android.support.v7.appcompat:android.support.v7.cardview" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-132xug7/res" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-5ysk4r/res" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-22503-1ktfiyf/res"
-[INFO]   Building Java source files: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/javac "-J-Xmx1024M" "-encoding" "utf8" "-bootclasspath" "/Users/fuerst/Library/android-sdk-macosx/platforms/android-23/android.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-v8.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-analytics.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/aps-analytics.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-android.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/jaxen-1.1.1.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/ti-commons-codec-1.3.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-common.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/titanium.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-app.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-ui.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/nineoldandroids-appc-2.4.0.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-filesystem.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-media.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-appcompat.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v4.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v7-appcompat.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-cardview.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/cardview-v7-23.0.1.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-locale.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-network.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-xml.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-platform.jar:/Library/Application Support/Titanium/modules/android/de.manumaticx.androidflip/1.0.1/androidflip.jar:/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar:/Library/Application Support/Titanium/modules/android/titutorial.audiorecorder/0.1/audiorecorder.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-apt.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/lib/titanium-verify.jar:R.class:AssetCryptImpl.class:FrogcounterActivity.class:FrogcounterAppInfo.class:FrogcounterApplication.class" "-d" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/classes" "-proc:none" "-target" "1.6" "-source" "1.6" "@/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/java-sources.txt"
-[INFO]   Running dexer: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/java "-Xmx2024M" "-XX:-UseGCOverheadLimit" "-Djava.ext.dirs=/Users/fuerst/Library/android-sdk-macosx/platform-tools" "-jar" "/Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/lib/dx.jar" "--dex" "--output=/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/classes.dex" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/classes" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/lib/titanium-verify.jar" "/Library/Application Support/Titanium/modules/android/de.manumaticx.androidflip/1.0.1/androidflip.jar" "/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar" "/Library/Application Support/Titanium/modules/android/titutorial.audiorecorder/0.1/audiorecorder.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-v8.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-analytics.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/aps-analytics.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-android.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/jaxen-1.1.1.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/ti-commons-codec-1.3.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-common.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/titanium.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-app.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-ui.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/nineoldandroids-appc-2.4.0.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-filesystem.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-media.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-appcompat.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v4.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v7-appcompat.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-cardview.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/cardview-v7-23.0.1.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-locale.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-network.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-xml.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-platform.jar"
-[INFO]   Creating unsigned apk
-[DEBUG]  Processing /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/app.ap_
-[DEBUG]  Deflating AndroidManifest.xml
-[DEBUG]  Adding assets/Resources/appicon.png
-[DEBUG]  Adding assets/Resources/assets/Bergmolch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Bergmolch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Bergmolch/4.jpg
-[DEBUG]  Adding assets/Resources/assets/Bergmolch/5.jpg
-[DEBUG]  Adding assets/Resources/assets/Erdkroete/0.jpg
-[DEBUG]  Adding assets/Resources/assets/Erdkroete/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Erdkroete/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Erdkroete/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Erdkroete/4.jpg
-[DEBUG]  Adding assets/Resources/assets/Fadenmolch/0.jpg
-[DEBUG]  Adding assets/Resources/assets/Fadenmolch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Fadenmolch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Fadenmolch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Fadenmolch/4.jpg
-[DEBUG]  Adding assets/Resources/assets/Grasfrosch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Grasfrosch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Grasfrosch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Grasfrosch/4.jpg
-[DEBUG]  Adding assets/Resources/assets/Gruenfrosch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Gruenfrosch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Gruenfrosch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Kammmolch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Kammmolch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Kammmolch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Kreuzkroete/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Kreuzkroete/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Laubfrosch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Laubfrosch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Laubfrosch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Moorfrosch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Moorfrosch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Moorfrosch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Springfrosch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Springfrosch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Springfrosch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Teichmolch/1.jpg
-[DEBUG]  Adding assets/Resources/assets/Teichmolch/2.jpg
-[DEBUG]  Adding assets/Resources/assets/Teichmolch/3.jpg
-[DEBUG]  Adding assets/Resources/assets/Teichmolch/4.jpg
-[DEBUG]  Adding assets/Resources/assets/Teichmolch/5.jpg
-[DEBUG]  Adding assets/Resources/assets/alytes obstetricans.jpg
-[DEBUG]  Adding assets/Resources/assets/bombina bombina.jpg
-[DEBUG]  Adding assets/Resources/assets/bombina variegat.jpg
-[DEBUG]  Adding assets/Resources/assets/bombina variegata.jpg
-[DEBUG]  Adding assets/Resources/assets/bufo bufo.jpg
-[DEBUG]  Adding assets/Resources/assets/bufo calamita.jpg
-[DEBUG]  Adding assets/Resources/assets/bufo viridis.jpg
-[DEBUG]  Adding assets/Resources/assets/counter.png
-[DEBUG]  Adding assets/Resources/assets/counter_.png
-[DEBUG]  Adding assets/Resources/assets/default.png
-[DEBUG]  Adding assets/Resources/assets/dendrobates leucomelas.jpg
-[DEBUG]  Adding assets/Resources/assets/dendrobates tricolor.jpg
-[DEBUG]  Adding assets/Resources/assets/grus carunculata.jpg
-[DEBUG]  Adding assets/Resources/assets/hyla arborea.jpg
-[DEBUG]  Adding assets/Resources/assets/hyla meridionalis.jpg
-[DEBUG]  Adding assets/Resources/assets/hyla sarda.jpg
-[DEBUG]  Adding assets/Resources/assets/hyperolius marmoratus.jpg
-[DEBUG]  Adding assets/Resources/assets/hyperolius tuberilinguis.jpg
-[DEBUG]  Adding assets/Resources/assets/ic_action_stop.png
-[DEBUG]  Adding assets/Resources/assets/pelobates fuscus.jpg
-[DEBUG]  Adding assets/Resources/assets/pelophylax lessonae.jpg
-[DEBUG]  Adding assets/Resources/assets/pelophylax ridibundus.jpg
-[DEBUG]  Adding assets/Resources/assets/pipa pipa.jpg
-[DEBUG]  Adding assets/Resources/assets/rana arvalis.jpg
-[DEBUG]  Adding assets/Resources/assets/rana esculenta.jpg
-[DEBUG]  Adding assets/Resources/assets/rana perezi.jpg
-[DEBUG]  Adding assets/Resources/assets/rana temporaria.jpg
-[DEBUG]  Adding assets/Resources/assets/rhinella marina.jpg
-[DEBUG]  Adding assets/Resources/assets/share.png
-[DEBUG]  Adding assets/Resources/assets/xenopus laevis.jpg
-[DEBUG]  Deflating assets/Resources/fonts/FontAwesome.ttf
-[DEBUG]  Deflating assets/Resources/fonts/Helvetica-Bold.otf
-[DEBUG]  Deflating assets/Resources/model/amphibienbaum.json
-[DEBUG]  Deflating assets/Resources/model/frogsounds.csv
-[DEBUG]  Deflating assets/Resources/model/frogsounds.json
-[DEBUG]  Deflating assets/Resources/model/recordslist.text
-[DEBUG]  Deflating assets/Resources/model/tree.json
-[DEBUG]  Deflating assets/app.json
-[DEBUG]  Deflating assets/index.json
-[DEBUG]  Deflating res/anim/abc_fade_in.xml
-[DEBUG]  Deflating res/anim/abc_fade_out.xml
-[DEBUG]  Deflating res/anim/abc_grow_fade_in_from_bottom.xml
-[DEBUG]  Deflating res/anim/abc_popup_enter.xml
-[DEBUG]  Deflating res/anim/abc_popup_exit.xml
-[DEBUG]  Deflating res/anim/abc_shrink_fade_out_from_bottom.xml
-[DEBUG]  Deflating res/anim/abc_slide_in_bottom.xml
-[DEBUG]  Deflating res/anim/abc_slide_in_top.xml
-[DEBUG]  Deflating res/anim/abc_slide_out_bottom.xml
-[DEBUG]  Deflating res/anim/abc_slide_out_top.xml
-[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_dark.xml
-[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_light.xml
-[DEBUG]  Deflating res/color-v23/abc_color_highlight_material.xml
-[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_dark.xml
-[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_light.xml
-[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_dark.xml
-[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_light.xml
-[DEBUG]  Deflating res/color/abc_primary_text_material_dark.xml
-[DEBUG]  Deflating res/color/abc_primary_text_material_light.xml
-[DEBUG]  Deflating res/color/abc_search_url_text.xml
-[DEBUG]  Deflating res/color/abc_secondary_text_material_dark.xml
-[DEBUG]  Deflating res/color/abc_secondary_text_material_light.xml
-[DEBUG]  Deflating res/color/switch_thumb_material_dark.xml
-[DEBUG]  Deflating res/color/switch_thumb_material_light.xml
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_clear_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_focused_holo.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-long-land-hdpi-v4/background.png
-[DEBUG]  Adding res/drawable-long-port-hdpi-v4/background.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_focused_holo.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-notlong-land-hdpi-v4/background.png
-[DEBUG]  Adding res/drawable-notlong-port-hdpi-v4/background.png
-[DEBUG]  Deflating res/drawable-v21/abc_action_bar_item_background_material.xml
-[DEBUG]  Deflating res/drawable-v21/abc_btn_colored_material.xml
-[DEBUG]  Deflating res/drawable-v23/abc_control_background_material.xml
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_clear_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_focused_holo.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/ic_action_add.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/ic_action_counter.png
-[DEBUG]  Adding res/drawable-xhdpi-v4/ic_action_frog.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/ic_action_add.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/ic_action_counter.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/ic_action_dicho.png
-[DEBUG]  Adding res/drawable-xxhdpi-v4/ic_action_frog.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_clear_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
-[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
-[DEBUG]  Deflating res/drawable/abc_btn_borderless_material.xml
-[DEBUG]  Deflating res/drawable/abc_btn_check_material.xml
-[DEBUG]  Deflating res/drawable/abc_btn_colored_material.xml
-[DEBUG]  Deflating res/drawable/abc_btn_default_mtrl_shape.xml
-[DEBUG]  Deflating res/drawable/abc_btn_radio_material.xml
-[DEBUG]  Deflating res/drawable/abc_cab_background_internal_bg.xml
-[DEBUG]  Deflating res/drawable/abc_cab_background_top_material.xml
-[DEBUG]  Deflating res/drawable/abc_dialog_material_background_dark.xml
-[DEBUG]  Deflating res/drawable/abc_dialog_material_background_light.xml
-[DEBUG]  Deflating res/drawable/abc_edit_text_material.xml
-[DEBUG]  Deflating res/drawable/abc_item_background_holo_dark.xml
-[DEBUG]  Deflating res/drawable/abc_item_background_holo_light.xml
-[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_dark.xml
-[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_light.xml
-[DEBUG]  Deflating res/drawable/abc_list_selector_holo_dark.xml
-[DEBUG]  Deflating res/drawable/abc_list_selector_holo_light.xml
-[DEBUG]  Deflating res/drawable/abc_ratingbar_full_material.xml
-[DEBUG]  Deflating res/drawable/abc_spinner_textfield_background_material.xml
-[DEBUG]  Deflating res/drawable/abc_switch_thumb_material.xml
-[DEBUG]  Deflating res/drawable/abc_tab_indicator_material.xml
-[DEBUG]  Deflating res/drawable/abc_text_cursor_material.xml
-[DEBUG]  Deflating res/drawable/abc_textfield_search_material.xml
-[DEBUG]  Adding res/drawable/appicon.png
-[DEBUG]  Adding res/drawable/background.png
-[DEBUG]  Adding res/drawable/btn_check_buttonless_on_64.png
-[DEBUG]  Adding res/drawable/btn_more_64.png
-[DEBUG]  Adding res/drawable/disclosure_64.png
-[DEBUG]  Deflating res/layout-v21/abc_screen_toolbar.xml
-[DEBUG]  Deflating res/layout-v21/titanium_ui_date_picker_spinner.xml
-[DEBUG]  Deflating res/layout-v21/titanium_ui_time_picker_spinner.xml
-[DEBUG]  Deflating res/layout/abc_action_bar_title_item.xml
-[DEBUG]  Deflating res/layout/abc_action_bar_up_container.xml
-[DEBUG]  Deflating res/layout/abc_action_bar_view_list_nav_layout.xml
-[DEBUG]  Deflating res/layout/abc_action_menu_item_layout.xml
-[DEBUG]  Deflating res/layout/abc_action_menu_layout.xml
-[DEBUG]  Deflating res/layout/abc_action_mode_bar.xml
-[DEBUG]  Deflating res/layout/abc_action_mode_close_item_material.xml
-[DEBUG]  Deflating res/layout/abc_activity_chooser_view.xml
-[DEBUG]  Deflating res/layout/abc_activity_chooser_view_list_item.xml
-[DEBUG]  Deflating res/layout/abc_alert_dialog_material.xml
-[DEBUG]  Deflating res/layout/abc_dialog_title_material.xml
-[DEBUG]  Deflating res/layout/abc_expanded_menu_layout.xml
-[DEBUG]  Deflating res/layout/abc_list_menu_item_checkbox.xml
-[DEBUG]  Deflating res/layout/abc_list_menu_item_icon.xml
-[DEBUG]  Deflating res/layout/abc_list_menu_item_layout.xml
-[DEBUG]  Deflating res/layout/abc_list_menu_item_radio.xml
-[DEBUG]  Deflating res/layout/abc_popup_menu_item_layout.xml
-[DEBUG]  Deflating res/layout/abc_screen_content_include.xml
-[DEBUG]  Deflating res/layout/abc_screen_simple.xml
-[DEBUG]  Deflating res/layout/abc_screen_simple_overlay_action_mode.xml
-[DEBUG]  Deflating res/layout/abc_screen_toolbar.xml
-[DEBUG]  Deflating res/layout/abc_search_dropdown_item_icons_2line.xml
-[DEBUG]  Deflating res/layout/abc_search_view.xml
-[DEBUG]  Deflating res/layout/abc_select_dialog_material.xml
-[DEBUG]  Deflating res/layout/notification_media_action.xml
-[DEBUG]  Deflating res/layout/notification_media_cancel_action.xml
-[DEBUG]  Deflating res/layout/notification_template_big_media.xml
-[DEBUG]  Deflating res/layout/notification_template_big_media_narrow.xml
-[DEBUG]  Deflating res/layout/notification_template_lines.xml
-[DEBUG]  Deflating res/layout/notification_template_media.xml
-[DEBUG]  Deflating res/layout/notification_template_part_chronometer.xml
-[DEBUG]  Deflating res/layout/notification_template_part_time.xml
-[DEBUG]  Deflating res/layout/select_dialog_item_material.xml
-[DEBUG]  Deflating res/layout/select_dialog_multichoice_material.xml
-[DEBUG]  Deflating res/layout/select_dialog_singlechoice_material.xml
-[DEBUG]  Deflating res/layout/support_simple_spinner_dropdown_item.xml
-[DEBUG]  Deflating res/layout/titanium_tabgroup.xml
-[DEBUG]  Deflating res/layout/titanium_ui_checkbox.xml
-[DEBUG]  Deflating res/layout/titanium_ui_date_picker_spinner.xml
-[DEBUG]  Deflating res/layout/titanium_ui_edittext.xml
-[DEBUG]  Deflating res/layout/titanium_ui_list_header_or_footer.xml
-[DEBUG]  Deflating res/layout/titanium_ui_list_item.xml
-[DEBUG]  Deflating res/layout/titanium_ui_spinner.xml
-[DEBUG]  Deflating res/layout/titanium_ui_switchcompat.xml
-[DEBUG]  Deflating res/layout/titanium_ui_time_picker_spinner.xml
-[DEBUG]  Deflating resources.arsc
-[DEBUG]  Processing /Library/Application Support/Titanium/modules/android/de.manumaticx.androidflip/1.0.1/androidflip.jar
-[DEBUG]  Processing /Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar
-[DEBUG]  Processing /Library/Application Support/Titanium/modules/android/titutorial.audiorecorder/0.1/audiorecorder.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-v8.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-analytics.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/aps-analytics.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-android.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/jaxen-1.1.1.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/ti-commons-codec-1.3.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-common.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/titanium.jar
-[DEBUG]  Deflating org/appcelerator/titanium/build.properties
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/background.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_100.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_100.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_18.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_48.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_64.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/default_icon.png
-[DEBUG]  Adding org/appcelerator/titanium/res/drawable/photoDefault.png
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-app.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-ui.jar
-[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.js
-[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.min.js
-[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/json2.js
-[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.js
-[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.min.js
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/nineoldandroids-appc-2.4.0.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-filesystem.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-media.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-appcompat.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v4.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v7-appcompat.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-cardview.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/cardview-v7-23.0.1.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-locale.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-network.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-xml.jar
-[DEBUG]  Processing /Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-platform.jar
-[DEBUG]  Adding classes.dex
-[INFO]   Processing /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/src
-[DEBUG]  Adding lib/armeabi/libkroll-v8.so
-[DEBUG]  Adding lib/armeabi/libstlport_shared.so
-[DEBUG]  Adding lib/armeabi/libtiverify.so
-[DEBUG]  Adding lib/armeabi-v7a/libkroll-v8.so
-[DEBUG]  Adding lib/armeabi-v7a/libstlport_shared.so
-[DEBUG]  Adding lib/armeabi-v7a/libtiverify.so
-[DEBUG]  Adding lib/x86/libkroll-v8.so
-[DEBUG]  Adding lib/x86/libstlport_shared.so
-[DEBUG]  Adding lib/x86/libtiverify.so
-[DEBUG]  Adding lib/armeabi/libde.manumaticx.androidflip.so
-[DEBUG]  Adding lib/armeabi-v7a/libde.manumaticx.androidflip.so
-[DEBUG]  Adding lib/x86/libde.manumaticx.androidflip.so
-[DEBUG]  Adding lib/armeabi/libcom.alcoapps.actionbarextras.so
-[DEBUG]  Adding lib/armeabi-v7a/libcom.alcoapps.actionbarextras.so
-[DEBUG]  Adding lib/x86/libcom.alcoapps.actionbarextras.so
-[DEBUG]  Adding lib/armeabi/libtitutorial.audiorecorder.so
-[DEBUG]  Adding lib/armeabi-v7a/libtitutorial.audiorecorder.so
-[DEBUG]  Adding lib/x86/libtitutorial.audiorecorder.so
-[INFO]   Writing unsigned apk: /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/app-unsigned.apk
-[INFO]   Using SHA1withRSA signature algorithm
-[INFO]   Signing apk: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/jarsigner "-sigalg" "SHA1withRSA" "-digestalg" "SHA1" "-keystore" "/Users/fuerst/.android.keystore" "-storepass" "*******" "-signedjar" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/FrogCounter.apk" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/app-unsigned.apk" "googlekey"
-[INFO]   Aligning zip file: /Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/zipalign "-v" "4" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/FrogCounter.apk" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/FrogCounter.apkz"
-[INFO]   Writing build manifest: /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/build-manifest.json
-[INFO]   Making sure the adb server is running
-[INFO]   Installing apk: /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/FrogCounter.apk
-[INFO]   Installing app on device: Nexus 5
-[TRACE]  Checking if package manager service is started
-[TRACE]  Package manager has started
-[TRACE]  Executing: /Users/fuerst/Library/android-sdk-macosx/platform-tools/adb -s 0621ed32229928e7 install -r /Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/FrogCounter.apk
-[INFO]   App successfully installed
-[INFO]   Starting app: de.appwerft.frogcounter/.FrogcounterActivity
-[DEBUG]  Trying to start the app...
-[INFO]   Application pid: 9473
-[INFO]   Project built successfully in 46s 274ms
+[INFO]   Packaging application: /Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/aapt "package" "-f" "-m" "-J" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/gen" "-M" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/AndroidManifest.xml" "-A" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/assets" "-S" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/res" "-I" "/Users/fuerst/Library/android-sdk-macosx/platforms/android-23/android.jar" "-F" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/app.ap_" "--auto-add-overlay" "--extra-packages" "ti.modules.titanium.ui:android.support.v7.appcompat:android.support.v7.cardview" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-xwpvm0/res" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-esi63h/res" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/1151113-29053-h7dnot/res"
+[INFO]   Building Java source files: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/javac "-J-Xmx1024M" "-encoding" "utf8" "-bootclasspath" "/Users/fuerst/Library/android-sdk-macosx/platforms/android-23/android.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-v8.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-analytics.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/aps-analytics.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-android.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/jaxen-1.1.1.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/ti-commons-codec-1.3.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-common.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/titanium.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-app.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-ui.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/nineoldandroids-appc-2.4.0.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-filesystem.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-media.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-appcompat.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v4.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v7-appcompat.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-cardview.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/cardview-v7-23.0.1.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-locale.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-network.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-xml.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-platform.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-utils.jar:/Library/Application Support/Titanium/modules/android/de.manumaticx.androidflip/1.0.1/androidflip.jar:/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar:/Library/Application Support/Titanium/modules/android/titutorial.audiorecorder/0.1/audiorecorder.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-apt.jar:/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/lib/titanium-verify.jar:R.class:AssetCryptImpl.class:FrogcounterActivity.class:FrogcounterAppInfo.class:FrogcounterApplication.class" "-d" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/classes" "-proc:none" "-target" "1.6" "-source" "1.6" "@/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/java-sources.txt"
+[INFO]   Running dexer: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/java "-Xmx2024M" "-XX:-UseGCOverheadLimit" "-Djava.ext.dirs=/Users/fuerst/Library/android-sdk-macosx/platform-tools" "-jar" "/Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/lib/dx.jar" "--dex" "--output=/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/classes.dex" "/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/build/android/bin/classes" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/lib/titanium-verify.jar" "/Library/Application Support/Titanium/modules/android/de.manumaticx.androidflip/1.0.1/androidflip.jar" "/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar" "/Library/Application Support/Titanium/modules/android/titutorial.audiorecorder/0.1/audiorecorder.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-v8.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-analytics.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/aps-analytics.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-android.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/jaxen-1.1.1.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/ti-commons-codec-1.3.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/kroll-common.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/titanium.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-app.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-ui.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/nineoldandroids-appc-2.4.0.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-filesystem.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-media.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-appcompat.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v4.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/android-support-v7-appcompat.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-cardview.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/cardview-v7-23.0.1.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-locale.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-network.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-xml.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-platform.jar" "/Users/fuerst/Library/Application Support/Titanium/mobilesdk/osx/5.1.1.GA/android/modules/titanium-utils.jar"
