@@ -29,12 +29,11 @@ module.exports = function(id) {
     	activity.onCreateOptionsMenu = function(_menuevent) {};
 		$.flipViewContainer.addEventListener('itemclick', function(_e) {
 			var sound = JSON.parse(_e.itemId);
-			$.audioPlayer.setUrl(sound.mp3);
+			console.log(sound);
+			$.audioPlayer.setUrl(sound.mp3url);
 			Ti.UI.createNotification({
-				message : 'Originallaufzeit: ' + sound.duration
+				message : 'Audiowiedergabe gestartet.' 
 			}).show();
-			//$.darker.show();
-			setTimeout(function(){$.audioPlayer.animate({top:-100});$.darker.hide();},20000);
 		});
 		$.add($.flipViewContainer);
 		$.flipViewContainer.peakNext(true);

@@ -23,6 +23,7 @@ module.exports = function(species) {
 	return Ti.UI.createListView({
 		sections : [Ti.UI.createListSection({
 			items : FrogSounds.getRecordsBySpecies(species).map(function(sound) {
+				console.log(sound.spectrogram);
 				return {
 					properties : {
 						itemId : JSON.stringify(sound),
@@ -41,6 +42,8 @@ module.exports = function(species) {
 					locality : {
 						height : sound.locality || sound.administrative_area ? Ti.UI.SIZE : 0,
 						text : 'Ort: ' + sound.locality + ', ' + sound.administrative_area
+					},spectrogram : {
+						image : sound.spectrogram
 					}
 				};
 			})
