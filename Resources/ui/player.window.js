@@ -2,24 +2,32 @@ var АктйонБар = require('com.alcoapps.actionbarextras');
 const DURATION = 20000;
 
 module.exports = function(sound) {
-	var audioPlayer = Ti.Media.createVideoPlayer({
-		url : sound.mp3url,
+	var audioPlayer = Ti.Media.createAudioPlayer({
+		url : sound.mp3,
 		allowBackground : true,
 		volume : 1
 	});
-	audioPlayer.start();
 	audioPlayer.addEventListener('progress', function(_e) {
 		// calculation of width:
-		var procent = (100 * (1 - _e.progress / DURATION)) + '%';
-		$.playerView.darker && $.playerView.darker.setWidth(procent);
+	//	var procent = (100 * (1 - _e.progress / DURATION)) + '%';
+	//	$.playerView.darker && $.playerView.darker.setWidth(procent);
 	});
-
+	audioPlayer.addEventListener('change', function(_e) {
+		if (_e.state==3) {
+			console.log(audioPlayer.duration);
+			var duration= audioPlayer.duration || DURATION;
+			$.playerView.darker && $.playerView.darker.animate({width:0,duration:duration});
+		}
+		// calculation of width:
+		console.log(_e.state);
+	});
 	audioPlayer.addEventListener('complete', function(_e) {
 		$.close();
 	});
 	var $ = Ti.UI.createWindow({
 		backgroundColor : 'transparent',
 		title : '',
+		theme: 'Theme.NoActionBar',
 		fullScreen : true,
 		screenOrientations : [Ti.UI.PORTRAIT]
 	});
@@ -41,8 +49,8 @@ module.exports = function(sound) {
 		image : sound.spectrogram
 	}));
 	$.playerView.darker = Ti.UI.createView({
-		backgroundColor : '#8000',
-		width : '100%'
+		backgroundColor : '#e000',
+		width : '100%',right:0
 	});
 	$.playerView.add($.playerView.darker);
 	$.add($.playerView);
@@ -50,5 +58,11 @@ module.exports = function(sound) {
 	$.addEventListener('open', function() {
 		$.activity.actionBar.hide();
 	});
+	$.addEventListener('close', function() {
+		audioPlayer.stop();
+		audioPlayer.release();
+		audioPlayer=null;
+	});
+	audioPlayer.start();
 	return $;
 };

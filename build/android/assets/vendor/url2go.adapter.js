@@ -1,0 +1,1 @@
+/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/vendor/url2go.adapter.js

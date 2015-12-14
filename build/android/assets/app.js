@@ -1,1 +1,1 @@
-var $=require("ui/main.window")(),FrogSounds=require("model/frogsounds.adapter");$.addEventListener("android:back",function(t){t.cancelBubble=!0;var e=Ti.Android.createIntent({action:Ti.Android.ACTION_MAIN,flags:Ti.Android.FLAG_ACTIVITY_NEW_TASK});return e.addCategory(Ti.Android.CATEGORY_HOME),Ti.Android.currentActivity.startActivity(e),!1}),$.open();
+/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/app.js

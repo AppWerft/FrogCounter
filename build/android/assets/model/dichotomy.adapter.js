@@ -1,1 +1,1 @@
-var start=(new Date).getTime(),tree=JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory,"model","amphibienbaum.json").read().text);console.log(tree);var decisions=tree.dichotomy;exports.getDecision=function(e){return e||(e=tree.rootid),{title:decisions[e].title,questions:decisions[e].alternatives.map(function(e){return{questiontext:e.property,images:e.images||[],id:e.nextdecision,wiki:e.wiki}})}};
+/Users/fuerst/Documents/APPC_WORKSPACE/FrogCounter/Resources/model/dichotomy.adapter.js
