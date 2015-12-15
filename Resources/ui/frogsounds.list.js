@@ -1,14 +1,15 @@
 var FrogSounds = require('model/frogsounds.adapter');
 
 module.exports = function(species) {
-	var headerView = Ti.UI.createView();
-	headerView.add(Ti.UI.createImageView({
+	var $= Ti.UI.createView();
+	$.headerView = Ti.UI.createView({height:100,top:0});
+	$.headerView.add(Ti.UI.createImageView({
 		left : 0,
 		height : 100,
 		width : 'auto',
 		image : '/assets/' + species.toLowerCase() + '.jpg'
 	}));
-	headerView.add(Ti.UI.createLabel({
+	$.headerView.add(Ti.UI.createLabel({
 		text : species,
 		right : 10,
 		color : '#6f7',
@@ -21,7 +22,8 @@ module.exports = function(species) {
 			fontWeight : 'bold'
 		}
 	}));
-	return Ti.UI.createListView({
+	$.list= Ti.UI.createListView({
+		top:100,
 		sections : [Ti.UI.createListSection({
 			items : FrogSounds.getRecordsBySpecies(species).map(function(sound) {
 				console.log(sound.spectrogram);
@@ -58,11 +60,13 @@ module.exports = function(species) {
 			'template' : require('TEMPLATES').frogsounds
 		},
 		defaultItemTemplate : 'template',
-		headerView : headerView
+		
 	});
+	$.add($.headerView);
+	$.add($.list);
+	return $;
 };
 
-$.add($.scrollableView);
 /*
 
  });*/

@@ -97,3 +97,42 @@ exports.frogsounds = {
 		}]
 	}]
 };
+exports.animalsounds = {
+	properties : {
+		height : Ti.UI.SIZE,
+	},
+	childTemplates : [{
+		type : 'Ti.UI.ImageView',
+		bindId : 'spectrogram',
+		properties : {
+			left : 0,
+			touchEnabled : false,
+			top : 0,
+			width : 100,
+			height : 80
+		}
+	}, {
+		type : 'Ti.UI.View',
+		properties : {
+			left : 110,
+			top : 10,
+			layout : 'vertical',
+			width : Ti.UI.FILL,
+			height : Ti.UI.SIZE
+		},
+		childTemplates : [ {
+			type : 'Ti.UI.Label',
+			bindId : 'title',
+			properties : {
+				font : {
+					fontSize : 20,
+					fontFamily : 'Helvetica-Bold'
+				},
+				color : '#eee',
+				left : 0,
+				right : 15,
+				width : Ti.UI.FILL,
+			}
+		}]
+	}]
+};

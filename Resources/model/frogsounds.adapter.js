@@ -1,5 +1,9 @@
 Ti.App.Properties.removeProperty('AMPHSPECIES');
 
+var records = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'recordslist.text').read().text;
+
+var animallines = records.split('\n');
+
 if (Ti.App.Properties.hasProperty('AMPHSPECIES')) {
 	var species = JSON.parse(Ti.App.Properties.getString('AMPHSPECIES'));
 } else {
@@ -17,7 +21,7 @@ if (Ti.App.Properties.hasProperty('AMPHSPECIES')) {
 		primarykey[key] = true;
 		if (!species[latin])
 			species[latin] = [];
-		if (key && records.match(new RegExp(key, 'gm'))) {
+		if (key && records.match(new RegExp(key, 'gm')) && !latin.match(/^Rana spec/i)) {
 			total++;
 			species[latin].push({
 				locality : line[2],
@@ -52,6 +56,30 @@ if (Ti.App.Properties.hasProperty('AMPHSPECIES')) {
 		message : 'Tierstimmenarchiv erfolgtreich importiert.\n' + total + ' Tonaufnahmen'
 	}).show();
 }
+exports.getAllAnimals = function() {
+	return animallines.map(function(line) {
+		var key = line.split(/\s+/g)[0].replace('_short.mp3', '');
+		return {
+			mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + key + '_short.mp3',
+			spectrogram : 'http://mm.webmasterei.com/spectrogram/' + key + '_short.mp3.wav.png.jpg',
+			title : key.replace(/_/g, ' ').replace(/[\d]+/g, '').replace(/^\s+/, '')
+		};
+	});
+};
+exports.searchAnimals = function(needle) {
+	var result = [];
+	animallines.forEach(function(line) {
+		var key = line.split(/\s+/g)[0].replace('_short.mp3', '');
+		if (key.match(new RegExp(needle, 'gm')))
+			result.push({
+				mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + key + '_short.mp3',
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + key + '_short.mp3.wav.png.jpg',
+				title : key.replace(/_/g, ' ').replace(/[\d]+/g, '').replace(/^\s+/, '')
+			});
+	});
+	return result;
+};
+
 exports.getAllSpeciesNames = function() {
 	var names = species ? Object.getOwnPropertyNames(species) : [];
 	return names.sort(function(a, b) {

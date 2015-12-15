@@ -54,10 +54,6 @@ module.exports = function(sound) {
 	});
 	$.playerView.add($.playerView.darker);
 	$.add($.playerView);
-
-	$.addEventListener('open', function() {
-		$.activity.actionBar.hide();
-	});
 	$.addEventListener('close', function() {
 		audioPlayer.stop();
 		audioPlayer.release();

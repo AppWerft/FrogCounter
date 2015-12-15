@@ -4,7 +4,7 @@ var FrogSounds = require('model/frogsounds.adapter');
 var URL2go = new (require('vendor/url2go.adapter'))();
 			
 var АктйонБар = require('com.alcoapps.actionbarextras');
-const MODELCACHE=1;
+const MODELCACHE = 1, SEARCH =2;
 module.exports = function(id) {
 	var $ = Ti.UI.createWindow({
 		fullScreen : true,
@@ -23,7 +23,16 @@ module.exports = function(id) {
     		message:URL2go.areCached() ?'Alle Laute sind jetzt auch ohne Netz verfügbar':'Die Laute sind derweil nur obline verfügbar. Wenn sie auch ohne Netz verfügbar sein soll, könne sie mit dem Knopf recht oben runtergeladen werden.'
     	}).show();
 		activity.onCreateOptionsMenu = function(_menuevent) {
-			_menuevent.menu.add({
+			var menu = _menuevent.menu;
+			menu.add({
+				title : 'Suche',
+				itemId : SEARCH,
+				icon :  Ti.App.Android.R.drawable.ic_action_search ,
+				showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS,
+			}).addEventListener("click", function() {
+				require('ui/search.window')().open();
+			});
+			menu.add({
 				title : '2Go',
 				itemId : MODELCACHE,
 				icon : URL2go.areCached() ? Ti.App.Android.R.drawable.ic_action_offline : Ti.App.Android.R.drawable.ic_action_online,
@@ -34,13 +43,15 @@ module.exports = function(id) {
 			URL2go.addEventListener('oncompleted', function(_e) {
 				var status = _e.cached ? 'offline' : 'online';
 				var icon = 'ic_action_' + status;
-				console.log('cachesate = ' + icon);
-				_menuevent.menu && _menuevent.menu.findItem(MODELCACHE).setIcon(Ti.App.Android.R.drawable[icon]);
+				console.log('cachestate ICON = ' + icon);
+				var item = menu.findItem(MODELCACHE);
+				console.log(item.apiName);
+				item && item.setIcon(Ti.App.Android.R.drawable[icon]);
 			});
 			URL2go.addEventListener('onprogress', function(_payload) {
 				if (_payload && _payload.progress) {
 					var ndx = Math.ceil(_payload.progress * 10);
-					_menuevent.menu && _menuevent.menu.findItem(MODELCACHE).setIcon(Ti.App.Android.R.drawable['ic_action_online_' + ndx]);
+					menu && menu.findItem(MODELCACHE).setIcon(Ti.App.Android.R.drawable['ic_action_online_' + ndx]);
 				}
 			});
 			
