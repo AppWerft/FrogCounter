@@ -9,21 +9,24 @@ if (!folder.exists()) {
 }
 
 /* Adapter object */
-var Adapter = function(urls) {
-	var urls = urls;
+var Adapter = function(_urls) {
+	console.log('Info: start URL cache');
 	this.eventhandlers = {};
 	var _this = this;
-	_this.urls = [];
-	if (urls && Array.isArray(urls)) {
-		urls.forEach(function(url) {
+	this.urls = [];
+	if (_urls && Array.isArray(_urls)) {
+		_urls.forEach(function(url) {
 			var file = Ti.Filesystem.getFile(DEPOT, FOLDER, Ti.Utils.md5HexDigest(url));
 			_this.urls.push({
 				url : url,
 				file : file,
 				cached : file.exists() ? true : false,
+				size : file.size
 			});
 		});
 	}
+	console.log(this.urls.length);
+	console.log(this.urls[0].file.nativePath);
 	return this;
 };
 Adapter.prototype = {
@@ -60,7 +63,7 @@ Adapter.prototype = {
 					}
 				}
 			});
-			console.log('caching of ' + url.url);
+			//console.log('caching of ' + url.url);
 			$.open('GET', url.url, true);
 			$.send();
 		}
@@ -81,7 +84,7 @@ Adapter.prototype = {
 					});
 					cacheURL(ndx);
 				} else {
-					_this.fireEvent('oncompleted', {
+					_this.fireEvent('onfinish', {
 						cached : true
 					});
 				}
@@ -94,11 +97,13 @@ Adapter.prototype = {
 		console.log('Info try to remove all caches');
 		this.urls.forEach(function(url) {
 			if (url.file.exists()) {
+				console.log('Info deleting file from cache ' + url.file.nativePath);
 				url.file.deleteFile();
 			}
 			url.cached = false;
+			console.log(url);
 		});
-		this.fireEvent('oncompleted', {
+		this.fireEvent('onfinish', {
 			cached : false
 		});
 	},

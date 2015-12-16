@@ -2,6 +2,7 @@ var FrogSounds = require('model/frogsounds.adapter');
 var АктйонБар = require('com.alcoapps.actionbarextras');
 
 module.exports = function(id) {
+
 	var $ = Ti.UI.createWindow({
 		fullScreen : true,
 		title : 'Froschstimmen'
@@ -20,7 +21,7 @@ module.exports = function(id) {
 	$.searchView = Ti.UI.createTextField({
 		height : 50,
 		top : 0,
-		hintText : "Suchbebegriff, beispielsweise „Elch“"
+		hintText : "Suchbebegriff, beispielsweise „Ratte“"
 	});
 	$.listView = Ti.UI.createListView({
 		sections : [Ti.UI.createListSection({
@@ -36,23 +37,34 @@ module.exports = function(id) {
 	$.add($.searchView);
 	$.searchView.addEventListener('change', function(_e) {
 		var needle = _e.source.getValue();
-		if (needle.length > 3) {
-			var items = FrogSounds.searchAnimals(needle).map(function(sound) {
-				return {
-					properties : {
-						itemId : JSON.stringify(sound),
-						accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
-					},
-					title : {
-						text : sound.title
-					},
-					spectrogram : {
-						image : sound.spectrogram
-					}
-				};
-			});
-			$.listView.sections[0].items = items;
+		var timer;
+		var time = new Date().getTime();
+		if (needle.length > 2) {
+			if (timer)
+				clearTimeout(timer);
+			timer = setTimeout(function() {
+				var items = FrogSounds.searchAnimals(needle).map(function(sound) {
+					return {
+						properties : {
+							itemId : JSON.stringify(sound),
+							accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+						},
+						title : {
+							text : sound.title
+						},
+						spectrogram : {
+							image : sound.spectrogram
+						}
+					};
+				});
+				$.listView.sections[0].items = items;
+				setTimeout(function() {
+					$.searchView.blur();
+				}, 2000);
+			}, 600);
+
 		}
+
 	});
 	$.listView.addEventListener('itemclick', function(_e) {
 		var sound = JSON.parse(_e.itemId);

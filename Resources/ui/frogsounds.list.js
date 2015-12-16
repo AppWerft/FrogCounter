@@ -26,7 +26,6 @@ module.exports = function(species) {
 		top:100,
 		sections : [Ti.UI.createListSection({
 			items : FrogSounds.getRecordsBySpecies(species).map(function(sound) {
-				console.log(sound.spectrogram);
 				return {
 					properties : {
 						itemId : JSON.stringify(sound),

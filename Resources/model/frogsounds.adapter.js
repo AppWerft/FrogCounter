@@ -86,6 +86,27 @@ exports.getAllSpeciesNames = function() {
 		return species[a].length < species[b].length ? true : false;
 	});
 };
+
+exports.getAllPOIs = function() {
+	var pois = [];
+	if (species && typeof species == 'object') {
+		Object.getOwnPropertyNames(species).forEach(function(latin) {
+			species[latin].forEach(function(record) {
+				if (record.lat && record.lng)
+					pois.push({
+						latin : latin,
+						lat : record.lat,
+						lng : record.lng,
+						description : record.description,
+						mp3url : record.mp3url,
+						spectromgram : record.specrogram
+					});
+			});
+		});
+	}
+	return pois;
+};
+
 exports.getRecordsBySpecies = function(name) {
 	if (Ti.App.Properties.hasProperty('AMPHSPECIES'))
 		return species[name];

@@ -31,6 +31,7 @@ module.exports = function() {
 			color : '#6f7',
 			opacity : 0.7,
 			zIndex : 999,
+			touchEnabled:false,
 			font : {
 				fontWeight : 'bold',
 				fontSize : 36
@@ -40,7 +41,7 @@ module.exports = function() {
 		view.latinname = Ti.UI.createLabel({
 			top : 50,
 			left : 10,
-			zIndex : 999,
+			zIndex : 999,touchEnabled:false,
 			color : '#6f7',
 			opacity : 0.7,
 			font : {

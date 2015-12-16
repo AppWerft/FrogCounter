@@ -1,46 +1,57 @@
 var FrogSounds = require('model/frogsounds.adapter');
 
+var URL2go = new (require('vendor/url2go.adapter'))(FrogSounds.getAllSoundURLs());
 
-var URL2go = new (require('vendor/url2go.adapter'))();
-			
 var АктйонБар = require('com.alcoapps.actionbarextras');
-const MODELCACHE = 1, SEARCH =2;
+const MODELCACHE = 1,
+    SEARCH = 2;
+
 module.exports = function(id) {
 	var $ = Ti.UI.createWindow({
 		fullScreen : true,
 		title : 'Froschstimmen'
 	});
 	$.addEventListener('open', function(_event) {
+		function onCloseFn() {
+			_event.source.close();
+		}
+
+
 		АктйонБар.setTitle('Amphibienlaute');
 		АктйонБар.setSubtitle('Tierstimmenarchiv.de');
-		_event.source.getActivity().actionBar.displayHomeAsUp = true;
-		
+
 		var activity = _event.source.getActivity();
-		activity.actionBar.onHomeIconItemSelected = function() {
-  			_event.source.close();
-    	};
-    	Ti.UI.createNotification({
-    		message:URL2go.areCached() ?'Alle Laute sind jetzt auch ohne Netz verfügbar':'Die Laute sind derweil nur obline verfügbar. Wenn sie auch ohne Netz verfügbar sein soll, könne sie mit dem Knopf recht oben runtergeladen werden.'
-    	}).show();
+		activity.actionBar.displayHomeAsUp = true;
+		activity.actionBar.onHomeIconItemSelected = onCloseFn;
+
 		activity.onCreateOptionsMenu = function(_menuevent) {
 			var menu = _menuevent.menu;
 			menu.add({
+				title : 'Karte',
+				itemId : 3,
+				icon : Ti.App.Android.R.drawable.ic_action_poi,
+				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
+			}).addEventListener("click", function() {
+				require('ui/poi.window')().open();
+			});
+			menu.add({
 				title : 'Suche',
 				itemId : SEARCH,
-				icon :  Ti.App.Android.R.drawable.ic_action_search ,
-				showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS,
+				icon : Ti.App.Android.R.drawable.ic_action_search,
+				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 			}).addEventListener("click", function() {
 				require('ui/search.window')().open();
 			});
+
 			menu.add({
 				title : '2Go',
 				itemId : MODELCACHE,
 				icon : URL2go.areCached() ? Ti.App.Android.R.drawable.ic_action_offline : Ti.App.Android.R.drawable.ic_action_online,
 				showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS,
 			}).addEventListener("click", function() {
-			  	URL2go.toggleAllURLs();
+				URL2go.toggleAllURLs();
 			});
-			URL2go.addEventListener('oncompleted', function(_e) {
+			URL2go.addEventListener('onfinish', function(_e) {
 				var status = _e.cached ? 'offline' : 'online';
 				var icon = 'ic_action_' + status;
 				console.log('cachestate ICON = ' + icon);
@@ -54,8 +65,11 @@ module.exports = function(id) {
 					menu && menu.findItem(MODELCACHE).setIcon(Ti.App.Android.R.drawable['ic_action_online_' + ndx]);
 				}
 			});
-			
+
 		};
+		Ti.UI.createNotification({
+			message : URL2go.areCached() ? 'Alle Laute sind jetzt auch ohne Netz verfügbar' : 'Die Laute sind derweil nur online verfügbar. Wenn sie auch ohne Netz verfügbar sein soll, könne sie mit dem Knopf recht oben runtergeladen werden.'
+		}).show();
 		$.flipViewContainer = require('de.manumaticx.androidflip').createFlipView({
 			views : FrogSounds.getAllSpeciesNames().map(function(species) {
 				return require('ui/frogsounds.list')(species);
