@@ -5,7 +5,7 @@ var АктйонБар = require('com.alcoapps.actionbarextras');
 
 module.exports = function(id) {
 	var $ = Ti.UI.createWindow({
-		fullScreen : true,
+		fullscreen : true,
 		title : 'Bestimmung'
 	});
 	var decision = Dicho.getDecision(id);
@@ -13,7 +13,6 @@ module.exports = function(id) {
 	$.list = Ti.UI.createTableView();
 	$.add($.list);
 	var rows = decision.questions.map(function(q, i) {
-		
 		var row = Ti.UI.createTableViewRow({
 			height : Ti.UI.SIZE,
 			hasChild :  true,

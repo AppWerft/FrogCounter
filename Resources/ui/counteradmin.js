@@ -54,7 +54,7 @@ module.exports = function() {
 		$.list.setData(rows);
 	}
 	var $ = Ti.UI.createWindow({
-		title : 'Zählverwaltung'
+		title : 'Zählverwaltung',fullscreen:true
 	});
 	$.list = Ti.UI.createTableView({
 		top:0,

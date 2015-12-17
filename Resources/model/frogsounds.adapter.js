@@ -8,6 +8,7 @@ if (Ti.App.Properties.hasProperty('AMPHSPECIES')) {
 	var species = JSON.parse(Ti.App.Properties.getString('AMPHSPECIES'));
 } else {
 	console.log('Info: species must build ============================');
+	/*
 	var lines = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'frogsounds.json').read().text);
 	var records = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'recordslist.text').read().text;
 	var species = {};
@@ -48,13 +49,11 @@ if (Ti.App.Properties.hasProperty('AMPHSPECIES')) {
 		if (!species[s].length)
 			delete species[s];
 	});
-
+	Ti.Filesystem.getFile(Ti.Filesystem.externalStorageDirectory,'species.json').write(JSON.stringify(species));
+	*/
+	var species = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'species.json').read().text);
 	Ti.App.Properties.setString('AMPHSPECIES', JSON.stringify(species));
-
-	primarykey = null;
-	Ti.UI.createNotification({
-		message : 'Tierstimmenarchiv erfolgtreich importiert.\n' + total + ' Tonaufnahmen'
-	}).show();
+	
 }
 exports.getAllAnimals = function() {
 	return animallines.map(function(line) {
@@ -108,10 +107,9 @@ exports.getAllPOIs = function() {
 };
 
 exports.getRecordsBySpecies = function(name) {
-	if (Ti.App.Properties.hasProperty('AMPHSPECIES'))
+	
 		return species[name];
-	else
-		return {};
+	
 };
 exports.getAllSoundURLs = function() {
 	var urls = [];

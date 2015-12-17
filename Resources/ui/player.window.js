@@ -28,7 +28,7 @@ module.exports = function(sound) {
 		backgroundColor : 'transparent',
 		title : '',
 		theme: 'Theme.NoActionBar',
-		fullScreen : true,
+		fullscreen : true,
 		screenOrientations : [Ti.UI.PORTRAIT]
 	});
 	$.darker = Ti.UI.createView({
@@ -55,6 +55,7 @@ module.exports = function(sound) {
 	$.playerView.add($.playerView.darker);
 	$.add($.playerView);
 	$.addEventListener('close', function() {
+		audioPlayer.pause();
 		audioPlayer.stop();
 		audioPlayer.release();
 		audioPlayer=null;

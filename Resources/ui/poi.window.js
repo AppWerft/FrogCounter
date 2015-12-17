@@ -3,8 +3,6 @@ var URL2go = new (require('vendor/url2go.adapter'))(FrogSounds.getAllSoundURLs()
 var АктйонБар = require('com.alcoapps.actionbarextras');
 var Map = require('ti.map');
 
-
-
 module.exports = function(id) {
 	var $ = Ti.UI.createWindow({
 		fullScreen : true,
@@ -16,6 +14,8 @@ module.exports = function(id) {
 		function onCloseFn() {
 			_event.source.close();
 		}
+
+
 		АктйонБар.setTitle('Amphibienlaute');
 		АктйонБар.setSubtitle('Aufnahmeorte auf Weltkarte');
 
@@ -33,7 +33,7 @@ module.exports = function(id) {
 				latitudeDelta : 30,
 				longitudeDelta : 30
 			},
-			mapType : 1,
+			mapType : Map.SATELLITE_TYPE,
 			enableZoomControls : false,
 			compassEnabled : false,
 			userLocation : false,
@@ -51,6 +51,7 @@ module.exports = function(id) {
 				mp3url : poi.mp3url,
 				longitude : poi.lng,
 				title : poi.latin,
+				image : '/images/frog.png',
 				subtitle : poi.description
 			});
 		}));
@@ -61,11 +62,15 @@ module.exports = function(id) {
 		Ti.Gesture.addEventListener('orientationchange', onOrientationchangeFn);
 	});
 	function onOrientationchangeFn() {
-		if (Ti.Platform.displayCaps.platformHeight > Ti.Platform.displayCaps.platformWidth)
-			$.activity.actionBar.show();
-		else
-			$.activity.actionBar.hide();
+		if ($.activity && $.activity.actionBar) {
+			if (Ti.Platform.displayCaps.platformHeight > Ti.Platform.displayCaps.platformWidth)
+				$.activity.actionBar.show();
+			else
+				$.activity.actionBar.hide();
+		}
 	}
-
+	$.addEventListener('close', function(_event) {
+		Ti.Gesture.removeEventListener('orientationchange', onOrientationchangeFn);
+	});
 	return $;
 };

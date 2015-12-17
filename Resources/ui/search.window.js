@@ -4,7 +4,7 @@ var АктйонБар = require('com.alcoapps.actionbarextras');
 module.exports = function(id) {
 
 	var $ = Ti.UI.createWindow({
-		fullScreen : true,
+		fullscreen : true,
 		title : 'Froschstimmen'
 	});
 	$.addEventListener('open', function(_event) {

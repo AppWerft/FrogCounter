@@ -6,7 +6,7 @@ var flippableView = require('de.manumaticx.androidflip');
 module.exports = function() {
 	var $ = Ti.UI.createWindow({
 		title : 'Froschzähler',
-		fullScreen : true
+		fullscreen : true
 	});
 	var views = frogs.map(function(frog) {
 		var view = Ti.UI.createView();

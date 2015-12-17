@@ -8,22 +8,18 @@ const MODELCACHE = 1,
 
 module.exports = function(id) {
 	var $ = Ti.UI.createWindow({
-		fullScreen : true,
+		fullscreen : true,
 		title : 'Froschstimmen'
 	});
 	$.addEventListener('open', function(_event) {
 		function onCloseFn() {
 			_event.source.close();
 		}
-
-
 		АктйонБар.setTitle('Amphibienlaute');
 		АктйонБар.setSubtitle('Tierstimmenarchiv.de');
-
 		var activity = _event.source.getActivity();
 		activity.actionBar.displayHomeAsUp = true;
 		activity.actionBar.onHomeIconItemSelected = onCloseFn;
-
 		activity.onCreateOptionsMenu = function(_menuevent) {
 			var menu = _menuevent.menu;
 			menu.add({
@@ -61,11 +57,10 @@ module.exports = function(id) {
 			});
 			URL2go.addEventListener('onprogress', function(_payload) {
 				if (_payload && _payload.progress) {
-					var ndx = Math.ceil(_payload.progress * 10);
+					var ndx = (Math.ceil(_payload.progress * 10)) % 10;
 					menu && menu.findItem(MODELCACHE).setIcon(Ti.App.Android.R.drawable['ic_action_online_' + ndx]);
 				}
 			});
-
 		};
 		Ti.UI.createNotification({
 			message : URL2go.areCached() ? 'Alle Laute sind jetzt auch ohne Netz verfügbar' : 'Die Laute sind derweil nur online verfügbar. Wenn sie auch ohne Netz verfügbar sein soll, könne sie mit dem Knopf recht oben runtergeladen werden.'
@@ -80,7 +75,10 @@ module.exports = function(id) {
 			Ti.UI.createNotification({
 				message : Ti.Network.online ? 'Audiowiedergabe gestartet.' : "Wiedergabe leider nicht möglich, da das " + Ti.Platform.model + ' keine Verbindung ins Neuland hat. '
 			}).show();
+			console.log("URL="+sound.mp3url);
 			sound.mp3 = URL2go.getURL(sound.mp3url);
+			console.log("PATH="+sound.mp3);
+			
 			if (Ti.Network.online)
 				require('ui/player.window')(sound).open();
 		});
