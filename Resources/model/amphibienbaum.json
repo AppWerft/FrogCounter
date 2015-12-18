@@ -21,7 +21,7 @@
 			"glossar": "",
 			"alternatives": [
 				{
-					"property": "Finger- und Zehenspitzen mit Haftscheiben",
+					"property": "Finger- und Zehenspitzen mit Haftscheiben; Oberseite meist einfarbig hellgrün \n➤ Laubfrosch",
 					"images": ["/assets/Laubfrosch/1.jpg"],
 					"wiki": "https://de.m.wikipedia.org/wiki/Laubfrosch"
 				}, {
@@ -34,31 +34,31 @@
 			"title": "Pupillenform",
 			"alternatives": [
 				{
-					"property": "Pupille waagerecht elliptisch oder rund",
+					"property": "Pupille breiter als hoch",
 					"nextdecision": "d"
 				}, {
-					"property": "Pupille senkrecht, schlitzförmig oder herzförmig",
-					"nextdecision": "g"
+					"property": "Pupille höher als breit: Senkrecht schlitzförmig bis herzförmig",
+					"nextdecision": "k"
 				}
 			]
 		},
 		"d": {
-			"title": "„echte“ Kröten/Frösche",
+			"title": "Echte Kröten, Echte Frösche",
 			"alternatives": [
 				{
-					"property": "Rücken warzig mit deutlichen sichtbaren länglichen Ohrdrüsen hinter den Augen",
+					"property": "Deutlich sichtbares ovales Ohrdrüsenpaket hinter den Augen, Oberseite warzig (Kröten)",
 					"nextdecision": "e"
 				}, {
-					"property": "Rücken glatt ohne länglichen Ohrdrüsen hinter den Augen",
+					"property": "Keine ovalen Ohrdrüsen hinter den Augen, meist glatte, glänzende Haut (Frösche)",
 					"nextdecision": "g"
 				}
 			]
 		},
 		"e": {
-			"title": "Irisfarbe",
+			"title": "Echte Kröten",
 			"alternatives": [
 				{
-					"property": "Iris bronzefarben",
+					"property": "Iris bronzefarben, kein heller Rückenstrich oder grünes Fleckenmuster \n➤ Erdkröte",
 					"wiki": "https://de.m.wikipedia.org/wiki/Erdkr%C3%B6te"
 				}, {
 					"property": "Iris grünlich gesprenkelt",
@@ -70,10 +70,10 @@
 			"title": "Rückenlinie",
 			"alternatives": [
 				{
-					"property": "lange, helle, kaum durchbrochene, dünne Rückenlinie",
+					"property": "lange, helle, dünne Rückenlinie \n➤ Kreuzkröte",
 					"wiki": "https://de.m.wikipedia.org/wiki/Kreuzkr%C3%B6te"
 				}, {
-					"property": "keine Rückenlinie",
+					"property": "keine Rückenlinie, deutlich grünes Fleckenmuster \n➤ Wechselkröte",
 					"wiki": "https://de.m.wikipedia.org/wiki/Wechselkr%C3%B6te"
 				}
 			]
@@ -82,11 +82,11 @@
 			"title": "Schläfenfleck",
 			"alternatives": [
 				{
-					"property": "dunkler Schläfenfleck hinter den Augen",
+					"property": "dunkler Schläfenfleck hinter den Augen (Braunfrösche)",
 					"nextdecision": "h"
 				}, {
-					"property": "kein Schläfenfleck",
-					"nextdecision": "j"
+					"property": "kein Schläfenfleck (Ausnahme: Jungtiere), meist hell- bis olivgrüne Grundfärbung \n➤ Grünfrösch (Komplex aus Teich-, See- und Kl. Wasserfrosch)",
+					"wiki": "https://de.m.wikipedia.org/wiki/Wasserfr%C3%B6sche"
 				}
 			]
 		},
@@ -94,10 +94,10 @@
 			"title": "",
 			"alternatives": [
 				{
-					"property": "Durchgehender, heller  breiter Rückenstreifen von der Kopfspüitze an.",
+					"property": "Scharf abgegrenztes, breites helles Rückenband vom Kopf an und/oder dunkel marmorierte Flanken. Nie größer als 7 cm \n➤ Moorfrosch",
 					"wiki": "https://de.m.wikipedia.org/wiki/Moorfrosch"
 				}, {
-					"property": "kein Streifen wie oben beschrieben",
+					"property": "kein abgegrenztes helles Rückenband und/oder dunkel marmorierte Flanken",
 					"nextdecision": "i"
 				}
 			]
@@ -106,38 +106,23 @@
 			"title": "Braunfrösche",
 			"alternatives": [
 				{
-					"property": "schwarzgefleckte Flanken, großer Fersenhöcker",
-					"wiki": "https://de.m.wikipedia.org/wiki/Moorfrosch"
-				}, {
-					"property": "bei der Fersenprobe reicht das Fersengelenk der Hinterbeine über Kopfspitze hinaus",
+					"property": "Brauner Rücken und weiße Unterseite meist ungefleckt. Trommelfell ungefähr so groß wie Auge und <2 mm davon entfernt. Bei der Fersenprobe reicht das Fersengelenk der Hinterbeine über Kopfspitze hinaus. Nie größer als 7-8 cm. \n➤ Springfrosch",
 					"images" : ["/assets/Springfrosch/2.jpg"],
 					"wiki": "https://de.m.wikipedia.org/wiki/Springfrosch"
 				}, {
-					"property": "weder Moor noch Springfrosch, Bauchseite fast immer – meist rötlich – marmoriert",
+					"property": "Bauchseite fast immer rötlich bis gräulich marmoriert, Rücken dunkel gefleckt oder getüpfelt, Größe bis ca. 11 cm \n➤ Grasfrosch",
 					"wiki": "https://de.m.wikipedia.org/wiki/Grasfrosch"
 				}
 			]
 		},
-		"j": {
-			"title": "Grünfrösche",
-			"alternatives": [
-				{
-					"property": "Körperlänge > 11 cm",
-					"wiki": "https://de.m.wikipedia.org/wiki/Seefrosch"
-				}, {
-					"property": "Körperlänge 2 – 11 cm",
-					"wiki": "https://de.m.wikipedia.org/wiki/Wasserfr%C3%B6sche"
-				}
-			]
-		},
 		"k": {
-			"title": "Unken",
+			"title": "Unken, Geburtshelferkröten, Knoblauchkröten",
 			"alternatives": [
 				{
-					"property": "Bauch leuchtend gelb mit schwarzen Flecken",
+					"property": "Bauch: Grundfarbe grau bis schwarz mit gelben Flecken \n➤ Gelbbauchunke",
 					"wiki": "https://de.m.wikipedia.org/wiki/Gelbbauchunke"
 				}, {
-					"property": "Bauch schwarz mit leuchtend orangeroten bis gelben Flecken",
+					"property": "Bauch schwarz mit weißen Punkten, leuchtend orangerote bis gelbe Flecken \n➤ Rotbauchunke",
 					"wiki": "https://de.m.wikipedia.org/wiki/Rotbauchunke"
 				}, {
 					"property": "Bauch weder leuchtend gelb noch orangerot",
@@ -146,13 +131,13 @@
 			]
 		},
 		"l": {
-			"title": "Kröten, Oberseitenfärbung",
+			"title": "Geburtshelfer-, Knoblauchkröten",
 			"alternatives": [
 				{
-					"property": "Oberseite einfarbig grau",
+					"property": "Oberseite einfarbig grau \n➤ Geburtshelferkröte",
 					"wiki": "https://de.m.wikipedia.org/wiki/Geburtshelferkröte"
 				}, {
-					"property": "Oberseite deutlich zwei- oder mehrfarbig gefleckt oder marmoriert ",
+					"property": "Oberseite deutlich zwei- oder mehrfarbig dunkelbraun gefleckt oder marmoriert \n➤ Knoblauchkröte",
 					"wiki": "https://de.m.wikipedia.org/wiki/Knoblauchkröte"
 				}
 			]
@@ -161,10 +146,10 @@
 			"title": "Salamander % Molche",
 			"alternatives": [
 				{
-					"property": "Haut glänzend wie Lackleder, Schwanz rund",
+					"property": "Schwanz im Querschnitt rund, Haut glänzend wie Lackleder",
 					"nextdecision": "r"
 				}, {
-					"property": "Haut nicht glänzend, Schwanz unrund",
+					"property": "Schwanz im Querschnitt seitlich zusammengedrückt, Haut nicht glänzend",
 					"nextdecision": "n"
 				}
 			]
@@ -173,49 +158,25 @@
 			"title": "Molche",
 			"alternatives": [
 				{
-					"property": "Bauch leuchtend orangerot, bis zum seitlichen Rand des Bauches gänzlich ungefleckt",
+					"property": "Bauch und Kehle leuchtend orangerot, Bauch bis zum Rand ungefleckt, Kehle nur selten gefleckt \n➤ Bergmolch",
 					"wiki": "https://de.m.wikipedia.org/wiki/Bergmolch"
 				}, {
-					"property": "Kopfunterseite gleichmäßig fein weiß granuliert",
+					"property": "Bauch gelb bis orange mit großen schwarzen Flecken, Kopfunterseite fein weiß granuliert, Oberseite dunkel mit feinkörniger Struktur \n➤ Kammmolch",
 					"wiki": "https://de.m.wikipedia.org/wiki/Kammmolch"
 				}, {
-					"property": "Weder Bauch leuchtend orangerot gefleckt noch Kopfunterseite gleichmäßig fein weiß granuliert",
-					"nextdecision":"o"
-				}
-			]
-		},
-		"o": {
-			"title": "Teichmolch/Fadenmolch",
-			"alternatives": [
-				{
-					"property": "Kloake dich geschwollen mit dunkler Mitte: ♂",
-					"nextdecision": "p"
-				}, {
-					"property": "Kloake klein, gelblich, mit grauem Schlitz: ♀",
-					"nextdecision": "q"
-				}
-			]
-		},
-		"p": {
-			"title": "Teichmolch/Fadenmolch ♂",
-			"alternatives": [
-				{
-					"property": "Unterer Schwanzflossensaum gelblich ungefleckt, darüber schwarze Punktreihe",
-					"wiki": "https://de.m.wikipedia.org/wiki/Fadenmolch"
-				}, {
-					"property": "Unterer Schwanzflossensaum abwechseln rot/schwarz gefleckt",
-					"wiki": "https://de.m.wikipedia.org/wiki/Teichmolch"
+					"property": "Anders als Berg- und Kammmolch",
+					"nextdecision":"q"
 				}
 			]
 		},
 		"q": {
-			"title": "Teichmolch/Fadenmolch ♀",
+			"title": "Teichmolch/Fadenmolch",
 			"alternatives": [
 				{
-					"property": "Hinterfußsohle meist hellen Höckerchen, Kehle immer und Bauch meist ungefleckt",
+					"property": "Kehle fleischfarben/unpigmentiert und ungefleckt, Bauch gelblich bis blass gelborange und schwach oder gar nicht gefleckt, Hinterfußsohle häufig mit zwei hellen Höckern, i.d.R. heller Fleck über der Hinterbeinwurzel \n➤ Fadenmolch",
 					"wiki": "https://de.m.wikipedia.org/wiki/Fadenmolch"
 				}, {
-					"property": "Fast nie hellen Sohlenhöcker; der Bauch meistens, die Kehle oft gefleckt",
+					"property": "Kehle blass gelblich und i.d.R. gefleckt, Bauch gelborange/orange mit kräftiger (♂) oder zarter (♀) Fleckung, fast nie hellen Sohlenhöcker \n➤ Teichmolch",
 					"wiki": "https://de.m.wikipedia.org/wiki/Teichmolch"
 				}
 			]
@@ -224,11 +185,11 @@
 			"title": "Salamander",
 			"alternatives": [
 				{
-					"property": "einfarbig schwarz",
+					"property": "einfarbig schwarz \n➤ Alpensalamander",
 					"wiki": "https://de.m.wikipedia.org/wiki/Alpensalamander"
 					
 				}, {
-					"property": "schwarz mit gelben Flecken oder Streifen",
+					"property": "schwarz mit gelben Flecken oder Streifen \n➤ Feuersalamander",
 					"wiki": "https://de.m.wikipedia.org/wiki/Feuersalamander"
 				}
 			]

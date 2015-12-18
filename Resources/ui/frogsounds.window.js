@@ -7,9 +7,10 @@ const MODELCACHE = 1,
     SEARCH = 2;
 
 module.exports = function(id) {
+	var menu;
 	var $ = Ti.UI.createWindow({
 		fullscreen : true,
-		title : 'Froschstimmen'
+		title : 'Froschstimmen',theme: "Theme.WithActionBar"
 	});
 	$.addEventListener('open', function(_event) {
 		function onCloseFn() {
@@ -21,7 +22,7 @@ module.exports = function(id) {
 		activity.actionBar.displayHomeAsUp = true;
 		activity.actionBar.onHomeIconItemSelected = onCloseFn;
 		activity.onCreateOptionsMenu = function(_menuevent) {
-			var menu = _menuevent.menu;
+			menu = _menuevent.menu;
 			menu.add({
 				title : 'Karte',
 				itemId : 3,
@@ -38,7 +39,6 @@ module.exports = function(id) {
 			}).addEventListener("click", function() {
 				require('ui/search.window')().open();
 			});
-
 			menu.add({
 				title : '2Go',
 				itemId : MODELCACHE,
@@ -66,6 +66,7 @@ module.exports = function(id) {
 			message : URL2go.areCached() ? 'Alle Laute sind jetzt auch ohne Netz verfügbar' : 'Die Laute sind derweil nur online verfügbar. Wenn sie auch ohne Netz verfügbar sein soll, könne sie mit dem Knopf recht oben runtergeladen werden.'
 		}).show();
 		$.flipViewContainer = require('de.manumaticx.androidflip').createFlipView({
+			top:60,
 			views : FrogSounds.getAllSpeciesNames().map(function(species) {
 				return require('ui/frogsounds.list')(species);
 			})

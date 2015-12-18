@@ -6,7 +6,8 @@ var flippableView = require('de.manumaticx.androidflip');
 module.exports = function() {
 	var $ = Ti.UI.createWindow({
 		title : 'Froschzähler',
-		fullscreen : true
+		fullscreen : true,
+		theme : "Theme.WithActionBar"
 	});
 	var views = frogs.map(function(frog) {
 		var view = Ti.UI.createView();
@@ -31,7 +32,7 @@ module.exports = function() {
 			color : '#6f7',
 			opacity : 0.7,
 			zIndex : 999,
-			touchEnabled:false,
+			touchEnabled : false,
 			font : {
 				fontWeight : 'bold',
 				fontSize : 36
@@ -41,7 +42,8 @@ module.exports = function() {
 		view.latinname = Ti.UI.createLabel({
 			top : 50,
 			left : 10,
-			zIndex : 999,touchEnabled:false,
+			zIndex : 999,
+			touchEnabled : false,
 			color : '#6f7',
 			opacity : 0.7,
 			font : {
@@ -55,7 +57,8 @@ module.exports = function() {
 		view.add(view.latinname);
 		view.counter = Ti.UI.createLabel({
 			top : -20,
-			right : 10,zIndex:999,
+			right : 10,
+			zIndex : 999,
 			height : 120,
 			color : '#DF8F00',
 			opacity : 1,
@@ -70,6 +73,7 @@ module.exports = function() {
 	});
 	//	console.log(views);
 	$.scrollableView = flippableView.createFlipView({
+		top : 60,
 		views : views
 	});
 
@@ -87,7 +91,7 @@ module.exports = function() {
 		opacity : 0.6
 	});
 	$.add(Ti.UI.createView({
-		top : 0,
+		top : 60,
 		height : 90,
 		touchEnabled : false,
 		backgroundColor : '#4000'

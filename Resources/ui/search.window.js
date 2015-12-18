@@ -2,43 +2,47 @@ var FrogSounds = require('model/frogsounds.adapter');
 var АктйонБар = require('com.alcoapps.actionbarextras');
 
 module.exports = function(id) {
-
+	var timer;
 	var $ = Ti.UI.createWindow({
-		fullscreen : true,
-		title : 'Froschstimmen'
+		fullscreen : true,theme: "Theme.WithActionBar",
+		orientationModes : [Ti.UI.UPSIDE_PORTRAIT, Ti.UI.PORTRAIT]
 	});
 	$.addEventListener('open', function(_event) {
 		function onCloseFn() {
 			$.close();
 		};
-		АктйонБар.setTitle('Suche');
-		АктйонБар.setSubtitle('Tierstimmenarchiv.de');
+		АктйонБар.setTitle({
+			text : 'Suche',
+			
+		});
+		АктйонБар.backgroundImage = '/assets/tsa.png';
+		
+		АктйонБар.displayUseLogoEnabled=true;
 		_event.source.getActivity().actionBar.displayHomeAsUp = true;
 		var activity = _event.source.getActivity();
 		activity.actionBar.onHomeIconItemSelected = onCloseFn;
+		activity.actionBar.backgroundImage = '/assets/tsa.png';
+		activity.actionBar.backgroundColor = 'white';
 
 	});
 	$.searchView = Ti.UI.createTextField({
 		height : 50,
-		top : 0,
+		top : 60,
 		hintText : "Suchbebegriff, beispielsweise „Ratte“"
 	});
 	$.listView = Ti.UI.createListView({
 		sections : [Ti.UI.createListSection({
-
 		})],
 		templates : {
 			'template' : require('TEMPLATES').animalsounds
 		},
 		defaultItemTemplate : 'template',
-		top : 50
+		top : 110
 	});
 	$.add($.listView);
 	$.add($.searchView);
 	$.searchView.addEventListener('change', function(_e) {
 		var needle = _e.source.getValue();
-		var timer;
-		var time = new Date().getTime();
 		if (needle.length > 2) {
 			if (timer)
 				clearTimeout(timer);
@@ -62,9 +66,7 @@ module.exports = function(id) {
 					$.searchView.blur();
 				}, 2000);
 			}, 600);
-
 		}
-
 	});
 	$.listView.addEventListener('itemclick', function(_e) {
 		var sound = JSON.parse(_e.itemId);
@@ -74,6 +76,5 @@ module.exports = function(id) {
 		if ($ && $.listView)
 			$.listView = null;
 	});
-
 	return $;
 };

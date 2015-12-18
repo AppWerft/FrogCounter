@@ -6,11 +6,11 @@ var АктйонБар = require('com.alcoapps.actionbarextras');
 module.exports = function(id) {
 	var $ = Ti.UI.createWindow({
 		fullscreen : true,
-		title : 'Bestimmung'
+		title : 'Bestimmung',theme: "Theme.WithActionBar"
 	});
 	var decision = Dicho.getDecision(id);
 	$.setTitle(decision.title);
-	$.list = Ti.UI.createTableView();
+	$.list = Ti.UI.createTableView({top:60});
 	$.add($.list);
 	var rows = decision.questions.map(function(q, i) {
 		var row = Ti.UI.createTableViewRow({
@@ -23,22 +23,24 @@ module.exports = function(id) {
 			text : (i+1),
 			left : 10,
 			top : 5,
-
+			height : Ti.UI.SIZE,
 			color : '#6f7',
 			opacity : 0.7,
 			font : {
-				fontSize : 36,fontFamily :'Helvetica-Bold',
+				fontSize : 36,
+				fontFamily :'Helvetica-Bold',
 				fontWeight : 'bold'
 			}
 		}));
 		row.add(Ti.UI.createView({
-			top : 10,right:10,
-			bottom:10,
+			top : 10,
+			right:10,
 			left : 60,
 			layout : 'vertical'
 		}));
 		row.children[1].add(Ti.UI.createLabel({
 			left : 0,
+			height : Ti.UI.SIZE,
 			textAlign : 'left',
 			text : q.questiontext,
 			font : {fontFamily :'Helvetica-Bold',
@@ -57,6 +59,7 @@ module.exports = function(id) {
 		if (q.description)
 			row.children[1].add(Ti.UI.createLabel({
 				left : 0,
+				height : Ti.UI.SIZE,
 				textAlign : 'left',
 				text : q.description,
 				font : {fontFamily :'Helvetica-Bold',

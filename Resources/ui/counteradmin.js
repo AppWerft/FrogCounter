@@ -54,10 +54,11 @@ module.exports = function() {
 		$.list.setData(rows);
 	}
 	var $ = Ti.UI.createWindow({
-		title : 'Zählverwaltung',fullscreen:true
+		title : 'Zählverwaltung',fullscreen:true,
+		theme: "Theme.WithActionBar"
 	});
 	$.list = Ti.UI.createTableView({
-		top:0,
+		top:60,
 		bottom:0,
 		height:Ti.UI.FILL
 	});

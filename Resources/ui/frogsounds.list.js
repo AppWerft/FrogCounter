@@ -16,9 +16,9 @@ module.exports = function(species) {
 		textAlign : 'right',
 		bottom : 2,
 		width : Ti.UI.FILL,
-		opacity : .7,
+		opacity : 0.6 ,
 		font : {
-			fontSize : 30,
+			fontSize : 36,
 			fontWeight : 'bold'
 		}
 	}));

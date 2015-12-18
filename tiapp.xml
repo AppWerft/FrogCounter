@@ -4,12 +4,12 @@
     <url>http://nabu.de</url>
     <id>de.appwerft.frogcounter</id>
     <name>Froschzähler</name>
-    <version>1.6.5</version>
+    <version>1.8.1</version>
     <publisher>fuerst</publisher>
     <copyright>2015 by fuerst</copyright>
     <icon>appicon.png</icon>
     <fullscreen>true</fullscreen>
-    <navbar-hidden>true</navbar-hidden>
+    <navbar-hidden>false</navbar-hidden>
     <analytics>false</analytics>
     <guid>4c36e7cb-0d01-4644-9ccc-5f6f03ceaa35</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
@@ -39,7 +39,7 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="165" android:versionName="1.6.5">
+        <manifest android:versionCode="181" android:versionName="1.8.1">
             <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
@@ -50,7 +50,7 @@
             <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
             <uses-permission android:name="de.appwerft.frogcounter.permission.MAPS_RECEIVE"/>
             <permission
-                android:name="de.appwerft.refugeemaps.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+                android:name="de.appwerft.frogcounter.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
             <application android:largeHeap="true">
                 <meta-data
                     android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAyLNPKjZotB2NTaEgOxAk2mzt-At9sOD0"/>
@@ -70,6 +70,6 @@
         <target device="mobileweb">false</target>
         <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>4.1.1.GA</sdk-version>
+    <sdk-version>5.1.0.GA</sdk-version>
     <property name="appc-app-id" type="string">5662b3b45a0c079506745adb</property>
 </ti:app>
