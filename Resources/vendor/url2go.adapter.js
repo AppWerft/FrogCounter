@@ -10,7 +10,7 @@ if (!folder.exists()) {
 
 /* Adapter object */
 var Adapter = function(_urls) {
-	console.log('Info: start URL cache');
+	console.log('Info: start URL cache INIT');
 	this.eventhandlers = {};
 	var _this = this;
 	this.urls = [];
@@ -25,8 +25,6 @@ var Adapter = function(_urls) {
 			});
 		});
 	}
-	console.log(this.urls.length);
-	console.log(this.urls[0].file.nativePath);
 	return this;
 };
 Adapter.prototype = {
@@ -44,6 +42,7 @@ Adapter.prototype = {
 		return urls.length == this.urls.length ? true : false;
 	},
 	toggleAllURLs : function() {
+		console.log('Info: toggleAllURLs');
 		if (this.areCached() == true) {
 			console.log('was TRUE, we uncache all');
 			this.uncacheAllURLs();
@@ -57,13 +56,11 @@ Adapter.prototype = {
 		function loadIt(url, onloadFn) {
 			var $ = Ti.Network.createHTTPClient({
 				onload : function() {
-					console.log(this.status);
 					if (this.status == 200) {
 						onloadFn(this.responseData);
 					}
 				}
 			});
-			//console.log('caching of ' + url.url);
 			$.open('GET', url.url, true);
 			$.send();
 		}
@@ -77,7 +74,7 @@ Adapter.prototype = {
 				_this.urls[ndx].cached = true;
 				ndx++;
 				if (ndx < _this.urls.length) {
-					console.log('NEXT model');
+					console.log('Info NEXT model ' + ndx + '/'+ _this.urls.length);
 					var progress = ndx / _this.urls.length;
 					_this.fireEvent('onprogress', {
 						progress : progress
@@ -97,11 +94,9 @@ Adapter.prototype = {
 		console.log('Info try to remove all caches');
 		this.urls.forEach(function(url) {
 			if (url.file.exists()) {
-				console.log('Info deleting file from cache ' + url.file.nativePath);
 				url.file.deleteFile();
 			}
 			url.cached = false;
-			console.log(url);
 		});
 		this.fireEvent('onfinish', {
 			cached : false

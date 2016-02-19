@@ -21,8 +21,10 @@
 	<style name="Theme.NoSystemNavigation" parent="@style/Theme.AppCompat">
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">false</item>
-   	    <item name="android:windowFullscreen">true</item>
+   	    <item name="android:windowFullscreen">false</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item> 
 	</style>
 </resources> 

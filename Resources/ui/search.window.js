@@ -76,5 +76,5 @@ module.exports = function(id) {
 		if ($ && $.listView)
 			$.listView = null;
 	});
-	return $;
+	$.open();
 };

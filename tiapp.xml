@@ -4,7 +4,7 @@
     <url>http://nabu.de</url>
     <id>de.appwerft.frogcounter</id>
     <name>Froschzähler</name>
-    <version>1.8.1</version>
+    <version>2.0.1</version>
     <publisher>fuerst</publisher>
     <copyright>2015 by fuerst</copyright>
     <icon>appicon.png</icon>
@@ -39,12 +39,16 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="181" android:versionName="1.8.1">
+        <services>
+            <service type="interval" url="downloader.js"/>
+        </services>
+        <manifest android:versionCode="201" android:versionName="2.0.1">
             <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
             <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
             <uses-permission
                 android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false"/>
             <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
@@ -62,14 +66,15 @@
         <module platform="android">com.alcoapps.actionbarextras</module>
         <module platform="iphone">ti.map</module>
         <module platform="android">ti.map</module>
+        <module platform="android">com.gbaldera.titouchgallery</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">false</target>
-        <target device="iphone">true</target>
+        <target device="iphone">false</target>
         <target device="mobileweb">false</target>
         <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>5.1.0.GA</sdk-version>
+    <sdk-version>5.1.1.GA</sdk-version>
     <property name="appc-app-id" type="string">5662b3b45a0c079506745adb</property>
 </ti:app>

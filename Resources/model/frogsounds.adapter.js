@@ -9,51 +9,51 @@ if (Ti.App.Properties.hasProperty('AMPHSPECIES')) {
 } else {
 	console.log('Info: species must build ============================');
 	/*
-	var lines = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'frogsounds.json').read().text);
-	var records = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'recordslist.text').read().text;
-	var species = {};
-	var primarykey = {};
-	var total = 0;
-	lines.forEach(function(line) {
-		var latin = line[0];
-		var key = line[33];
-		if (primarykey[key] == true)
-			return;
-		primarykey[key] = true;
-		if (!species[latin])
-			species[latin] = [];
-		if (key && records.match(new RegExp(key, 'gm')) && !latin.match(/^Rana spec/i)) {
-			total++;
-			species[latin].push({
-				locality : line[2],
-				administrative_area : line[3],
-				country : line[4],
-				state : line[5],
-				scenic_area : line[6],
-				lat : line[7],
-				lng : line[8],
-				cdate : line[10] || 'keine Angabe',
-				ctime : line[11] || '',
-				description : line[17],
-				sound_type : line[18],
-				background_species : line[19],
-				author : line[22],
-				weather : line[23],
-				duration : line[32],
-				mp3url : 'http://www.tierstimmenarchiv.de/recordings/' + key + '_short.mp3',
-				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + key + '_short.mp3.wav.png.jpg'
-			});
-		}
-	});
-	Object.getOwnPropertyNames(species).forEach(function(s) {
-		if (!species[s].length)
-			delete species[s];
-	});
-	Ti.Filesystem.getFile(Ti.Filesystem.externalStorageDirectory,'species.json').write(JSON.stringify(species));
-	*/
+	 var lines = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'frogsounds.json').read().text);
+	 var records = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'recordslist.text').read().text;
+	 var species = {};
+	 var primarykey = {};
+	 var total = 0;
+	 lines.forEach(function(line) {
+	 var latin = line[0];
+	 var key = line[33];
+	 if (primarykey[key] == true)
+	 return;
+	 primarykey[key] = true;
+	 if (!species[latin])
+	 species[latin] = [];
+	 if (key && records.match(new RegExp(key, 'gm')) && !latin.match(/^Rana spec/i)) {
+	 total++;
+	 species[latin].push({
+	 locality : line[2],
+	 administrative_area : line[3],
+	 country : line[4],
+	 state : line[5],
+	 scenic_area : line[6],
+	 lat : line[7],
+	 lng : line[8],
+	 cdate : line[10] || 'keine Angabe',
+	 ctime : line[11] || '',
+	 description : line[17],
+	 sound_type : line[18],
+	 background_species : line[19],
+	 author : line[22],
+	 weather : line[23],
+	 duration : line[32],
+	 mp3url : 'http://www.tierstimmenarchiv.de/recordings/' + key + '_short.mp3',
+	 spectrogram : 'http://mm.webmasterei.com/spectrogram/' + key + '_short.mp3.wav.png.jpg'
+	 });
+	 }
+	 });
+	 Object.getOwnPropertyNames(species).forEach(function(s) {
+	 if (!species[s].length)
+	 delete species[s];
+	 });
+	 Ti.Filesystem.getFile(Ti.Filesystem.externalStorageDirectory,'species.json').write(JSON.stringify(species));
+	 */
 	var species = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'species.json').read().text);
 	Ti.App.Properties.setString('AMPHSPECIES', JSON.stringify(species));
-	
+
 }
 exports.getAllAnimals = function() {
 	return animallines.map(function(line) {
@@ -90,7 +90,7 @@ exports.getAllPOIs = function() {
 	var pois = [];
 	if (species && typeof species == 'object') {
 		Object.getOwnPropertyNames(species).forEach(function(latin) {
-			species[latin].forEach(function(record) {
+			species[latin].records.forEach(function(record) {
 				if (record.lat && record.lng)
 					pois.push({
 						latin : latin,
@@ -107,14 +107,21 @@ exports.getAllPOIs = function() {
 };
 
 exports.getRecordsBySpecies = function(name) {
-	
-		return species[name];
-	
+	return species[name].records;
+
+};
+exports.getImagesBySpecies = function(name) {
+	return {
+		big : species[name].bigimage,
+		thumb : '/assets/' + name + '.png',
+		name : name
+	};
+
 };
 exports.getAllSoundURLs = function() {
 	var urls = [];
 	Object.getOwnPropertyNames(species).forEach(function(name) {
-		species[name].forEach(function(item) {
+		species[name].records.forEach(function(item) {
 			urls.push(item.mp3url);
 		});
 	});

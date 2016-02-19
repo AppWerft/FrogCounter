@@ -14,8 +14,6 @@ module.exports = function(id) {
 		function onCloseFn() {
 			_event.source.close();
 		}
-
-
 		АктйонБар.setTitle('Amphibienlaute');
 		АктйонБар.setSubtitle('Aufnahmeorte auf Weltkarte');
 
@@ -25,7 +23,6 @@ module.exports = function(id) {
 		activity.onCreateOptionsMenu = function(_menuevent) {
 
 		};
-
 		$.mapView = Map.createView({
 			region : {
 				latitude : 43,
@@ -33,7 +30,7 @@ module.exports = function(id) {
 				latitudeDelta : 30,
 				longitudeDelta : 30
 			},
-			mapType : Map.SATELLITE_TYPE,
+			mapType : Map.TERRAIN_TYPE,
 			enableZoomControls : false,
 			compassEnabled : false,
 			userLocation : false,
@@ -51,11 +48,10 @@ module.exports = function(id) {
 				mp3url : poi.mp3url,
 				longitude : poi.lng,
 				title : poi.latin,
-				image : '/images/frog.png',
+				image : '/images/appicon.png',
 				subtitle : poi.description
 			});
 		}));
-
 		Ti.UI.createNotification({
 			message : 'Klick auf Marker startet sofort Wiedergabe'
 		}).show();
@@ -72,5 +68,9 @@ module.exports = function(id) {
 	$.addEventListener('close', function(_event) {
 		Ti.Gesture.removeEventListener('orientationchange', onOrientationchangeFn);
 	});
-	return $;
+	$.open();
 };
+
+
+
+
